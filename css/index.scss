@@ -3,6 +3,9 @@
 @import './partials/mixinis';
 @import './partials/icons';
 @import './partials/media-queries';
+@import './partials/variables';
+@import './partials/box-shadows';
+
 body {
   margin: 0;
 }
@@ -25,6 +28,505 @@ p {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+h1 {
+  font-family: 'ObjectSans-Heavy', sans-serif;
+  @include text_dimensions(50px, 52px, center, null);
+  @include m_query(tablet_two) {
+    @include text_dimensions(40px, 42px, center, null);
+  }
+  @include m_query(tablet) {
+    @include text_dimensions(30px, 32px, center, null);
+  }
+  @include m_query(phone) {
+    @include text_dimensions(25px, 27px, center, null);
+  }
+}
+
+h3 {
+  font-family: 'ObjectSans-Heavy', sans-serif;
+  @include text_dimensions(30px, 150%, null, null);
+  @include m_query(tablet_two) {
+    @include text_dimensions(25px, 130%, null, null);
+  }
+  @include m_query(tablet) {
+    @include text_dimensions(20px, 110%, null, null);
+  }
+  @include m_query(phone) {
+    @include text_dimensions(20px, 110%, null, null);
+  }
+}
+
+h4 {
+  font-family: 'OpenSans-Bold', sans-serif;
+  @include text_dimensions(25px, 150%, null, $royal_night);
+  @include m_query(phone) {
+    @include text_dimensions(20px, 110%, null, $royal_night);
+  }
+}
+
+input {
+  font-family: 'OpenSans-SemiBold', sans-serif;
+  font-weight: 600;
+  border-radius: $input_b_radius;
+  padding: 18px 22px;
+  background: none;
+  border: 2px solid #ffffff;
+  @include text_dimensions(16px, 140%, null, $white);
+  &:focus {
+    outline: none;
+  }
+}
+
+::placeholder {
+  color: $white;
+}
+
+// **************Our results section start**************
+// **************Our results section end**************
+
+// **************Breadcrumb section start**************
+.breadcrumb {
+  margin-bottom: 20px;
+  margin-top: 74px;
+  @include m_query(desktop) {
+    padding: 0 15px;
+  }
+  @include m_query(tablet_two) {
+    padding: 0 15px;
+  }
+  @include m_query(tablet) {
+    padding: 0 15px;
+  }
+  @include m_query(phone) {
+    padding: 0 15px;
+  }
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+
+    @include m_query(tablet_two) {
+      flex-direction: column;
+    }
+    @include m_query(tablet) {
+      flex-direction: column;
+    }
+    @include m_query(phone) {
+      flex-direction: column;
+    }
+    &-right {
+      .search_card {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 16px 22px;
+        border-radius: $slider_card_b_radius;
+        box-shadow: $box_shadow_card_slider;
+        button {
+          padding: 0;
+          background: none;
+          border: none;
+          :focus {
+            outline: none;
+          }
+        }
+        @include m_query(tablet_two) {
+          margin-top: 30px;
+        }
+        @include m_query(tablet) {
+          margin-top: 30px;
+        }
+        @include m_query(phone) {
+          margin-top: 30px;
+        }
+      }
+      input {
+        margin-left: 10px;
+        padding: 0;
+        border-radius: 0;
+        @include text_dimensions(16px, 140%, null, $light_gray);
+      }
+      ::placeholder {
+        color: $light_gray;
+      }
+    }
+  }
+  span {
+    font-family: 'OpenSans-Regular', sans-serif;
+    @include text_dimensions(16px, 140%, null, null);
+    font-weight: 400;
+  }
+  a {
+    text-decoration: none;
+    color: $grey_20;
+  }
+  .active {
+    color: $light_gray;
+  }
+}
+// **************Breadcrumb section end**************
+
+// **************Complex single header section start**************
+.complex-single {
+  margin-bottom: 100px;
+  @include m_query(desktop) {
+    padding: 0 15px;
+  }
+  @include m_query(tablet_two) {
+    padding: 0 15px;
+  }
+  @include m_query(tablet) {
+    padding: 0 15px;
+  }
+  @include m_query(phone) {
+    padding: 0 15px;
+  }
+  h3 {
+    text-align: left;
+    margin-bottom: 50px;
+    color: $royal_night;
+  }
+  &__flex {
+    display: flex;
+
+    @include m_query(tablet_two) {
+      flex-direction: column;
+    }
+    @include m_query(tablet) {
+      flex-direction: column;
+    }
+    @include m_query(phone) {
+      flex-direction: column;
+    }
+    &-left {
+      width: calc(100% - 439px);
+      padding-right: 41px;
+
+      @include m_query(tablet_two) {
+        width: 100%;
+        order: 2;
+      }
+      @include m_query(tablet) {
+        width: 100%;
+        order: 2;
+      }
+      @include m_query(phone) {
+        width: 100%;
+        order: 2;
+      }
+      p {
+        margin-top: 20px;
+        font-family: 'OpenSans-Regular', sans-serif;
+        font-weight: 400;
+        @include text_dimensions(18px, 160%, null, $grey_20);
+      }
+    }
+    &-right {
+      width: 439px;
+      @include m_query(tablet_two) {
+        width: 100%;
+        order: 1;
+      }
+      @include m_query(tablet) {
+        width: 100%;
+        order: 1;
+      }
+      @include m_query(phone) {
+        width: 100%;
+        order: 1;
+      }
+      .card {
+        padding: 27px 33px;
+        width: 100%;
+        height: 374px;
+        display: flex;
+        justify-content: center;
+        background: #ffffff;
+        box-shadow: $box_shadow_card;
+        border-radius: 10px;
+        @include m_query(tablet_two) {
+          margin-bottom: 30px;
+        }
+        @include m_query(tablet) {
+          margin-bottom: 30px;
+        }
+        @include m_query(phone) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+// **************Complex single header section start**************
+
+// **************Complex single main section start**************
+.complex-singlemain {
+  margin-bottom: 100px;
+  position: relative;
+  .element {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  @include m_query(desktop) {
+    padding: 0 15px;
+  }
+  @include m_query(tablet_two) {
+    padding: 0 15px;
+  }
+  @include m_query(tablet) {
+    padding: 0 15px;
+  }
+  @include m_query(phone) {
+    padding: 0 15px;
+  }
+  &__flex {
+    display: flex;
+    align-items: center;
+    margin-top: 28px;
+    @include m_query(tablet_two) {
+      flex-direction: column;
+    }
+    @include m_query(tablet) {
+      flex-direction: column;
+    }
+    @include m_query(phone) {
+      flex-direction: column;
+    }
+    &-left {
+      width: 272px;
+      @include m_query(tablet_two) {
+        width: 100%;
+        order: 1;
+      }
+      @include m_query(tablet) {
+        width: 100%;
+        order: 1;
+      }
+      @include m_query(phone) {
+        width: 100%;
+        order: 1;
+      }
+      .card {
+        padding: 27px 33px;
+        width: 100%;
+        height: 232px;
+        display: flex;
+        justify-content: center;
+        background: #ffffff;
+        box-shadow: $box_shadow_card;
+        border-radius: 10px;
+        @include m_query(tablet_two) {
+          margin-bottom: 30px;
+        }
+        @include m_query(tablet) {
+          margin-bottom: 30px;
+        }
+        @include m_query(phone) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+    &-right {
+      width: calc(100% - 272px);
+      padding-left: 41px;
+
+      @include m_query(tablet_two) {
+        width: 100%;
+        order: 2;
+        padding-left: 0;
+      }
+      @include m_query(tablet) {
+        width: 100%;
+        order: 2;
+        padding-left: 0;
+      }
+      @include m_query(phone) {
+        width: 100%;
+        order: 2;
+        padding-left: 0;
+      }
+      h4 {
+        font-size: 18px;
+      }
+      p {
+        @include m_query(tablet_two) {
+          width: 100%;
+        }
+        @include m_query(tablet) {
+          width: 100%;
+        }
+        @include m_query(phone) {
+          width: 100%;
+        }
+        width: 72%;
+        margin-top: 20px;
+        font-family: 'OpenSans-Regular', sans-serif;
+        font-weight: 400;
+        @include text_dimensions(16px, 160%, null, $grey_20);
+      }
+    }
+  }
+}
+// **************Complex single maub section start**************
+
+// **************Partners section start**************
+.partners {
+  margin-bottom: 100px;
+  @include m_query(desktop) {
+    padding: 0 15px;
+  }
+  @include m_query(tablet_two) {
+    padding: 0 15px;
+  }
+  @include m_query(tablet) {
+    padding: 0 15px;
+  }
+  @include m_query(phone) {
+    padding: 0 15px;
+  }
+  h1 {
+    text-align: left;
+    margin-bottom: 50px;
+    color: $royal_night;
+  }
+  &__card {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 24px);
+    margin-left: -12px;
+    &-sub {
+      display: flex;
+      justify-content: center;
+      margin: 12px;
+      width: calc(20% - 24px);
+      border-radius: $default_b_radius;
+      padding: 22px 32px;
+      box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+      @include m_query(desktop) {
+        width: calc(25% - 24px);
+      }
+      @include m_query(tablet_two) {
+        width: calc(33.33% - 24px);
+      }
+      @include m_query(tablet) {
+        width: calc(50% - 24px);
+      }
+      @include m_query(phone) {
+        width: 100%;
+      }
+    }
+  }
+}
+// **************Partners section end**************
+
+// **************Submit application section start**************
+.submit-app {
+  padding: 50px 15px;
+  border-radius: $b_radius_card;
+  background: $linear_bg;
+  color: $white;
+  margin-bottom: 100px;
+  @include m_query(desktop) {
+    border-radius: 0;
+  }
+  @include m_query(tablet_two) {
+    border-radius: 0;
+  }
+  @include m_query(tablet) {
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+  @include m_query(phone) {
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+  &__input {
+    display: flex;
+    padding: 0 102px;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @include m_query(desktop) {
+      width: 100%;
+    }
+    @include m_query(tablet) {
+      padding: 0;
+    }
+    @include m_query(phone) {
+      padding: 0;
+    }
+    &-left {
+      width: 100%;
+      display: flex;
+    }
+    .send_btn {
+      cursor: pointer;
+      background: #ffffff;
+      border-radius: 50px;
+      width: 100%;
+      height: 100%;
+      border: none;
+      @include text_dimensions(18px, null, null, $aare_river);
+      font-weight: 700;
+      font-family: 'OpenSans-Bold', sans-serif;
+
+      @include m_query(tablet) {
+        font-size: 16px;
+      }
+      @include m_query(phone) {
+        font-size: 16px;
+      }
+    }
+    &-sub {
+      margin: 12px;
+      width: calc(25% - 24px);
+      position: relative;
+      z-index: 1;
+
+      @include m_query(desktop) {
+        width: calc(50% - 24px);
+      }
+      @include m_query(tablet_two) {
+        width: calc(50% - 24px);
+      }
+      @include m_query(tablet) {
+        width: 100%;
+        height: 62px;
+      }
+      @include m_query(phone) {
+        width: 100%;
+        height: 62px;
+      }
+    }
+    &-layer {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      border-radius: 30px;
+      background: $white;
+      top: 0;
+      left: 0;
+      opacity: 0.2;
+    }
+  }
+
+  input {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+  }
+  h1 {
+    margin-bottom: 45px;
+  }
+}
+// **************Submit application section end**************
 
 // **************Footer section start**************
 .footer {
@@ -224,3 +726,12 @@ p {
   }
 }
 // **************Footer section end**************
+
+// .navbar-nav .nav-link.active {
+//   color: green;
+// }
+
+// .mystyle {
+//   color: green;
+//   font-size: 40px;
+// }
