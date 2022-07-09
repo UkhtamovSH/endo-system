@@ -15,12 +15,12 @@
     }
   }
   @if $deviceType == desktop {
-    @media (max-width: 1200px) and (min-width: 992px) {
+    @media (max-width: 1300px) and (min-width: 992px) {
       @content;
     }
   }
   @if $deviceType == desktop_lg {
-    @media (max-width: 1500px) and (min-width: 1200px) {
+    @media (max-width: 1500px) and (min-width: 1300px) {
       @content;
     }
   }

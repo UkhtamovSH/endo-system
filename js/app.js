@@ -10,11 +10,11 @@ $(function () {
 });
 // **************navigation active function end**************
 
-window.onscroll = function () {
-  let t = document.getElementById('textt');
-  if (document.documentElement.scrollTop) {
-    t.classList.add('mystyle');
-  } else {
-    t.classList.remove('mystyle');
-  }
-};
+// window.onscroll = function () {
+//   let t = document.getElementById('textt');
+//   if (document.documentElement.scrollTop) {
+//     t.classList.add('mystyle');
+//   } else {
+//     t.classList.remove('mystyle');
+//   }
+// };

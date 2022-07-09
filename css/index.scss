@@ -28,6 +28,10 @@ p {
   max-width: 1200px;
   margin: 0 auto;
 }
+.container_two {
+  max-width: 1244px;
+  margin: 0 auto;
+}
 
 h1 {
   font-family: 'ObjectSans-Heavy', sans-serif;
@@ -82,7 +86,224 @@ input {
   color: $white;
 }
 
+// **************Product card style start**************
+.product_card_title {
+  @include m_query(desktop) {
+    padding: 0 15px;
+  }
+  @include m_query(tablet_two) {
+    padding: 0 15px;
+  }
+  @include m_query(tablet) {
+    padding: 0 15px;
+  }
+  @include m_query(phone) {
+    padding: 0 15px;
+  }
+  h1 {
+    text-align: left;
+    margin-bottom: 50px;
+    color: $royal_night;
+  }
+}
+.product_card_flex {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 100px;
+  h1 {
+    text-align: left;
+    margin-bottom: 50px;
+    color: $royal_night;
+  }
+  .product_card {
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    margin: 22px;
+    width: calc(33.33% - 44px);
+    height: 363px;
+    box-shadow: $box_shadow_card_slider;
+    border-radius: $slider_card_b_radius;
+    color: $white;
+    .round_count {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 84px;
+      height: 84px;
+      position: absolute;
+      top: 10.91px;
+      left: 10.91px;
+      border-radius: 50%;
+      background: $linear_bg;
+      z-index: 2;
+      .count_text {
+        font-family: 'OpenSans-Regular', sans-serif;
+        font-style: normal;
+        @include text_dimensions(24px, 150%, center, $white);
+        font-weight: 400;
+        // transform: translate(0, 8px);
+      }
+      .top_round_text {
+        width: 54px;
+        height: 18px;
+        margin-left: 14px;
+      }
+      .bottom_round_text {
+        width: 70px;
+        height: 32px;
+        margin-left: 7.5px;
+        margin-top: -12px;
+        border-radius: 0;
+      }
+    }
+    img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+      @include m_query(tablet_two) {
+        height: 378px;
+      }
+      @include m_query(phone) {
+        height: 378px;
+      }
+    }
+    .text {
+      font-family: 'OpenSans-Regular', sans-serif;
+      font-weight: 400;
+      @include text_dimensions(18px, 150%, center, $white);
+      background: $royal_night;
+      padding: 8px 15px;
+      border-radius: 0 0 15px 15px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include m_query(tablet) {
+        font-size: 15px;
+      }
+      @include m_query(phone) {
+        font-size: 15px;
+      }
+    }
+    @include m_query(tablet_two) {
+      width: calc(50% - 44px);
+      height: 463px;
+    }
+    @include m_query(tablet) {
+      width: calc(50% - 44px);
+    }
+    @include m_query(phone) {
+      width: 100%;
+      height: 463px;
+    }
+  }
+}
+// **************Product card style end**************
+
 // **************Our results section start**************
+.our-results {
+  padding: 80px 0 139px 0;
+  @include m_query(desktop) {
+    padding: 50px 15px 50px 15px;
+  }
+  @include m_query(tablet_two) {
+    padding: 50px 15px 50px 15px;
+  }
+  @include m_query(tablet) {
+    padding: 40px 15px 40px 15px;
+  }
+  @include m_query(phone) {
+    padding: 30px 15px 30px 15px;
+  }
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(../img/rectangle.png);
+  background-position: center center;
+  background-repeat: no-repeat, repeat;
+  width: 100%;
+  h1 {
+    color: $royal_night;
+    margin-bottom: 25px;
+  }
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    &-sub {
+      width: calc(33.33% - 24px);
+      p {
+        font-family: 'OpenSans-Regular', sans-serif;
+        @include text_dimensions(22px, 140%, null, $shuttle_grey);
+        font-weight: 400;
+        @include m_query(tablet_two) {
+          text-align: center;
+        }
+        @include m_query(tablet) {
+          text-align: center;
+        }
+        @include m_query(phone) {
+          text-align: center;
+        }
+      }
+      @include m_query(tablet_two) {
+        width: 50%;
+        padding: 0 15px;
+      }
+      @include m_query(tablet) {
+        width: 50%;
+        padding: 0 15px;
+      }
+      @include m_query(phone) {
+        width: 100%;
+        padding: 0 15px;
+      }
+    }
+  }
+  &__textflex {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    @include m_query(tablet_two) {
+      justify-content: center;
+    }
+    @include m_query(tablet) {
+      justify-content: center;
+    }
+    @include m_query(phone) {
+      justify-content: center;
+    }
+    &-left {
+      & .number {
+        font-family: 'ObjectSans-Heavy', sans-serif;
+        font-weight: 800;
+        @include text_dimensions(9.375em, null, null, null);
+        background: linear-gradient(337.72deg, #00bf9f 22.4%, #364bcc 70.95%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        @include m_query(tablet_two) {
+          @include text_dimensions(7.375em, null, null, null);
+        }
+        @include m_query(tablet) {
+          @include text_dimensions(5.375em, null, null, null);
+        }
+        @include m_query(phone) {
+          @include text_dimensions(5.375em, null, null, null);
+        }
+      }
+    }
+    &-right {
+      margin-top: -4em;
+    }
+  }
+}
 // **************Our results section end**************
 
 // **************Breadcrumb section start**************
@@ -171,6 +392,7 @@ input {
 // **************Complex single header section start**************
 .complex-single {
   margin-bottom: 100px;
+
   @include m_query(desktop) {
     padding: 0 15px;
   }
@@ -203,7 +425,16 @@ input {
     &-left {
       width: calc(100% - 439px);
       padding-right: 41px;
-
+      .text_product_main {
+        margin-top: 20px;
+        .text_product {
+          margin-top: 6px;
+          width: 100%;
+          font-family: 'OpenSans-Regular', sans-serif;
+          font-weight: 400;
+          @include text_dimensions(18px, 160%, null, $grey_20);
+        }
+      }
       @include m_query(tablet_two) {
         width: 100%;
         order: 2;
@@ -224,7 +455,58 @@ input {
       }
     }
     &-right {
+      border-radius: 10px;
       width: 439px;
+      .card_product_img {
+        border-radius: 10px;
+      }
+      .product_imgs {
+        img {
+          width: 100%;
+          display: block;
+        }
+
+        .img-display {
+          overflow: hidden;
+        }
+
+        .img-showcase {
+          display: flex;
+          width: 100%;
+          transition: all 0.5s ease;
+        }
+
+        .img-showcase {
+          box-shadow: $box_shadow_card_slider;
+        }
+        .img-showcase img {
+          min-width: 100%;
+          border-radius: 10px;
+          padding: 0.3rem;
+        }
+
+        .img-select {
+          display: flex;
+          img {
+            border-radius: 10px;
+          }
+        }
+
+        .img-item {
+          margin: 0.3rem;
+        }
+
+        .img-item:nth-child(1),
+        .img-item:nth-child(2),
+        .img-item:nth-child(3) {
+          margin-right: 0;
+        }
+
+        .img-item:hover {
+          opacity: 0.8;
+        }
+      }
+
       @include m_query(tablet_two) {
         width: 100%;
         order: 1;
@@ -259,7 +541,8 @@ input {
     }
   }
 }
-// **************Complex single header section start**************
+
+// **************Complex single header section end**************
 
 // **************Complex single main section start**************
 .complex-singlemain {
@@ -272,6 +555,17 @@ input {
     display: flex;
     height: 100%;
     align-items: center;
+  }
+
+  .text_product_main {
+    margin-top: 20px;
+    .text_product {
+      margin-top: 6px;
+      width: 100%;
+      font-family: 'OpenSans-Regular', sans-serif;
+      font-weight: 400;
+      @include text_dimensions(18px, 160%, null, $grey_20);
+    }
   }
   @include m_query(desktop) {
     padding: 0 15px;
