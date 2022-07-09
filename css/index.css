@@ -284,6 +284,185 @@ input:focus {
   color: #ffffff;
 }
 
+.catalog-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.catalog-flex__left {
+  width: 283px;
+  height: auto;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+.catalog-flex__left-sub {
+  -webkit-box-shadow: 0px 8px 28px -6px rgba(103, 103, 103, 0.1), 0px 18px 88px -4px rgba(103, 103, 103, 0.1);
+          box-shadow: 0px 8px 28px -6px rgba(103, 103, 103, 0.1), 0px 18px 88px -4px rgba(103, 103, 103, 0.1);
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+}
+
+.catalog-flex__left a {
+  font-family: 'OpenSans-SemiBold', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 16px 21px !important;
+}
+
+.catalog-flex__left a:hover {
+  background: #e3f3ff;
+}
+
+.catalog-flex__left a:hover span {
+  color: #2c3e9a !important;
+}
+
+.catalog-flex__left a .active {
+  background: #e3f3ff;
+}
+
+.catalog-flex__left a .active span {
+  color: #2c3e9a !important;
+}
+
+.catalog-flex__left a:nth-child(1) {
+  -webkit-border-radius: 10px 10px 0 0;
+          border-radius: 10px 10px 0 0;
+}
+
+.catalog-flex__left a:nth-last-child(1) {
+  -webkit-border-radius: 0 0 10px 10px;
+          border-radius: 0 0 10px 10px;
+}
+
+.catalog-flex__left a span:nth-child(1) {
+  color: #333333;
+}
+
+.catalog-flex__left a span:nth-child(2) {
+  color: #bdbdbd;
+}
+
+@media (max-width: 992px) and (min-width: 765px) {
+  .catalog-flex__left {
+    display: none;
+  }
+}
+
+@media (max-width: 765px) and (min-width: 576px) {
+  .catalog-flex__left {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 576px) and (min-width: 320px) {
+  .catalog-flex__left {
+    display: none;
+  }
+}
+
+.catalog-flex__right {
+  width: -webkit-calc(100% - 283px);
+  width: calc(100% - 283px);
+}
+
+@media (max-width: 992px) and (min-width: 765px) {
+  .catalog-flex__right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 765px) and (min-width: 576px) {
+  .catalog-flex__right {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 576px) and (min-width: 320px) {
+  .catalog-flex__right {
+    width: 100%;
+  }
+}
+
+.catalog-flex .product_card_flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1300px) and (min-width: 992px) {
+  .catalog-flex .product_card {
+    width: -webkit-calc(50% - 44px) !important;
+    width: calc(50% - 44px) !important;
+    min-height: 400px !important;
+    padding-top: 20px;
+  }
+}
+
+.catalog-flex .product_card .round_count_text {
+  position: absolute;
+  top: 10.91px;
+  left: 10.91px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(5.07%, #00bf9f), color-stop(80.07%, #364bcc));
+  background: -webkit-linear-gradient(right, #00bf9f 5.07%, #364bcc 80.07%);
+  background: -o-linear-gradient(right, #00bf9f 5.07%, #364bcc 80.07%);
+  background: linear-gradient(270deg, #00bf9f 5.07%, #364bcc 80.07%);
+  z-index: 2;
+  padding: 4px 12px;
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 140%;
+  color: #ffffff;
+  font-weight: 400;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+}
+
+@media (max-width: 1300px) and (min-width: 992px) {
+  .catalog-flex .product_card .text {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 765px) {
+  .catalog-flex .product_card .text {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 765px) and (min-width: 576px) {
+  .catalog-flex .product_card .text {
+    font-size: 16px !important;
+  }
+}
+
+@media only screen and (max-width: 576px) and (min-width: 320px) {
+  .catalog-flex .product_card .text {
+    font-size: 16px !important;
+  }
+}
+
 @media (max-width: 1300px) and (min-width: 992px) {
   .product_card_title {
     padding: 0 15px;
@@ -314,6 +493,10 @@ input:focus {
   color: #2c3e9a;
 }
 
+.product_card_flex2 {
+  margin-bottom: 0 !important;
+}
+
 .product_card_flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -339,12 +522,25 @@ input:focus {
   margin: 22px;
   width: -webkit-calc(33.33% - 44px);
   width: calc(33.33% - 44px);
-  height: 363px;
+  min-height: 363px;
   -webkit-box-shadow: 0px -8px 15px rgba(0, 0, 0, 0.05), 0px 8px 28px -6px rgba(103, 103, 103, 0.1), 0px 18px 88px -4px rgba(103, 103, 103, 0.1);
           box-shadow: 0px -8px 15px rgba(0, 0, 0, 0.05), 0px 8px 28px -6px rgba(103, 103, 103, 0.1), 0px 18px 88px -4px rgba(103, 103, 103, 0.1);
   -webkit-border-radius: 15px;
           border-radius: 15px;
   color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .product_card_flex .product_card .round_count {
@@ -432,7 +628,7 @@ input:focus {
   padding: 8px 15px;
   -webkit-border-radius: 0 0 15px 15px;
           border-radius: 0 0 15px 15px;
-  height: 80px;
+  min-height: 80px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -463,7 +659,7 @@ input:focus {
   .product_card_flex .product_card {
     width: -webkit-calc(50% - 44px);
     width: calc(50% - 44px);
-    height: 463px;
+    min-height: 463px;
   }
 }
 
@@ -477,7 +673,7 @@ input:focus {
 @media only screen and (max-width: 576px) and (min-width: 320px) {
   .product_card_flex .product_card {
     width: 100%;
-    height: 463px;
+    min-height: 463px;
   }
 }
 
@@ -742,7 +938,7 @@ input:focus {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  padding: 16px 22px;
+  padding: 12px 22px;
   -webkit-border-radius: 15px;
           border-radius: 15px;
   -webkit-box-shadow: 0px -8px 15px rgba(0, 0, 0, 0.05), 0px 8px 28px -6px rgba(103, 103, 103, 0.1), 0px 18px 88px -4px rgba(103, 103, 103, 0.1);

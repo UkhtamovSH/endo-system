@@ -7,6 +7,22 @@ $(function () {
       $this.addClass('active');
     }
   });
+  $('.catalog-flex__left-sub a').each(function () {
+    var $this = $(this);
+    console.log(
+      $this.attr('href') + '?catalog=' + 'catalog1' ===
+        current + '?catalog=' + 'catalog1'
+    );
+    // console.log(current.substring(1) + '?catalog=' + 'catalog1');
+    // console.log($this.attr('href') === current + '?catalog=' + 'catalog1');
+    if (
+      $this.attr('href') + '?catalog=' + 'catalog1' ===
+      current.substring(1) + '?catalog=' + 'catalog1'
+    ) {
+      console.log(true);
+      $this.addClass('active');
+    }
+  });
 });
 // **************navigation active function end**************
 

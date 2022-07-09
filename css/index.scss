@@ -86,6 +86,131 @@ input {
   color: $white;
 }
 
+// **************Catalog style start**************
+.catalog-flex {
+  display: flex;
+  margin-bottom: 100px;
+  &__left {
+    width: 283px;
+    height: auto;
+    border-radius: $default_b_radius;
+    margin-top: 25px;
+    margin-left: 20px;
+    &-sub {
+      box-shadow: $box_shadow_card;
+      border-radius: $b_radius_card;
+    }
+    a {
+      font-family: 'OpenSans-SemiBold', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      @include text_dimensions(18px, 150%, null, null);
+      text-decoration: none;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      background-color: $white;
+      padding: 16px 21px !important;
+      &:hover {
+        background: $alice_blue;
+        span {
+          color: $royal_night !important;
+        }
+      }
+      & .active {
+        background: $alice_blue;
+        span {
+          color: $royal_night !important;
+        }
+      }
+      &:nth-child(1) {
+        border-radius: 10px 10px 0 0;
+      }
+      &:nth-last-child(1) {
+        border-radius: 0 0 10px 10px;
+      }
+      span {
+        &:nth-child(1) {
+          color: $grey_20;
+        }
+        &:nth-child(2) {
+          color: $light_gray;
+        }
+      }
+    }
+    @include m_query(tablet_two) {
+      display: none;
+    }
+    @include m_query(tablet) {
+      display: none;
+    }
+    @include m_query(phone) {
+      display: none;
+    }
+  }
+  &__right {
+    width: calc(100% - 283px);
+
+    @include m_query(tablet_two) {
+      width: 100%;
+    }
+    @include m_query(tablet) {
+      width: 100%;
+    }
+    @include m_query(phone) {
+      width: 100%;
+    }
+  }
+  .product_card_flex {
+    display: flex;
+  }
+  .product_card {
+    @include m_query(desktop) {
+      width: calc(50% - 44px) !important;
+      min-height: 400px !important;
+      padding-top: 20px;
+    }
+    // @include m_query(tablet_two) {
+    //   width: 100% !important;
+    // }
+    // @include m_query(tablet) {
+    //   width: 100% !important;
+    // }
+    // @include m_query(phone) {
+    //   width: 100%;
+    //   height: 463px;
+    // }
+    .round_count_text {
+      position: absolute;
+      top: 10.91px;
+      left: 10.91px;
+      background: $linear_bg;
+      z-index: 2;
+      padding: 4px 12px;
+      font-family: 'OpenSans-Regular', sans-serif;
+      font-style: normal;
+      @include text_dimensions(12px, 140%, null, $white);
+      font-weight: 400;
+      border-radius: 20px;
+    }
+    .text {
+      @include m_query(desktop) {
+        font-size: 16px !important;
+      }
+      @include m_query(tablet_two) {
+        font-size: 16px !important;
+      }
+      @include m_query(tablet) {
+        font-size: 16px !important;
+      }
+      @include m_query(phone) {
+        font-size: 16px !important;
+      }
+    }
+  }
+}
+// **************Catalog style end**************
+
 // **************Product card style start**************
 .product_card_title {
   @include m_query(desktop) {
@@ -106,6 +231,9 @@ input {
     color: $royal_night;
   }
 }
+.product_card_flex2 {
+  margin-bottom: 0 !important;
+}
 .product_card_flex {
   display: flex;
   flex-wrap: wrap;
@@ -122,10 +250,13 @@ input {
     overflow: hidden;
     margin: 22px;
     width: calc(33.33% - 44px);
-    height: 363px;
+    min-height: 363px;
     box-shadow: $box_shadow_card_slider;
     border-radius: $slider_card_b_radius;
     color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .round_count {
       display: flex;
       justify-content: center;
@@ -177,7 +308,7 @@ input {
       background: $royal_night;
       padding: 8px 15px;
       border-radius: 0 0 15px 15px;
-      height: 80px;
+      min-height: 80px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -190,14 +321,14 @@ input {
     }
     @include m_query(tablet_two) {
       width: calc(50% - 44px);
-      height: 463px;
+      min-height: 463px;
     }
     @include m_query(tablet) {
       width: calc(50% - 44px);
     }
     @include m_query(phone) {
       width: 100%;
-      height: 463px;
+      min-height: 463px;
     }
   }
 }
@@ -342,7 +473,7 @@ input {
         display: flex;
         align-items: center;
         height: 100%;
-        padding: 16px 22px;
+        padding: 12px 22px;
         border-radius: $slider_card_b_radius;
         box-shadow: $box_shadow_card_slider;
         button {
