@@ -599,32 +599,32 @@ input {
 
         .img-display {
           overflow: hidden;
+          box-shadow: $box_shadow_card;
         }
 
         .img-showcase {
           display: flex;
           width: 100%;
           transition: all 0.5s ease;
-        }
-
-        .img-showcase {
-          box-shadow: $box_shadow_card_slider;
+          border-radius: $default_b_radius;
+          background-color: $white;
         }
         .img-showcase img {
           min-width: 100%;
-          border-radius: 10px;
-          padding: 0.3rem;
+          padding: 1rem;
         }
 
         .img-select {
           display: flex;
           img {
-            border-radius: 10px;
+            border-radius: $default_b_radius;
           }
         }
 
         .img-item {
           margin: 0.3rem;
+          box-shadow: $box_shadow_card;
+          border-radius: $default_b_radius;
         }
 
         .img-item:nth-child(1),
