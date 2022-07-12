@@ -103,14 +103,6 @@ input {
 }
 
 // **************Navigation section start**************
-// .navbar-nav .nav-link.active {
-//   color: green;
-// }
-
-// .mystyle {
-//   color: green;
-//   font-size: 40px;
-// }
 .navigation {
   &__flex {
     display: flex;
@@ -264,6 +256,142 @@ input {
   }
 }
 // **************AppHeader section end**************
+
+// **************About company section start**************
+.aboutcompany-header {
+  h1 {
+    color: $royal_night;
+    margin-bottom: 34px;
+  }
+  p {
+    font-family: 'OpenSans-Regular', sans-serif;
+    font-weight: 400;
+    @include text_dimensions(18px, 160%, null, $grey_20);
+    span {
+      color: $royal_night;
+      font-family: 'OpenSans-Bold', sans-serif;
+    }
+  }
+  &__tags {
+    ul {
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 0;
+      margin: 0px 0 50px 0;
+      li {
+        margin: 26px 20px 10px 0;
+        display: inline-block;
+        a {
+          padding: 8px 24px;
+          font-family: 'OpenSans-SemiBold', sans-serif;
+          background: $alice_blue;
+          border-radius: $button_b_radius;
+          @include text_dimensions(14px, null, null, $royal_night);
+          font-weight: 600;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__flex {
+    display: flex;
+    margin-bottom: 12px;
+    &-left {
+      width: calc(100% - 527px);
+      padding-right: 60px;
+    }
+    &-right {
+      width: 527px;
+      position: relative;
+      z-index: 2;
+      &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: $linear_bg;
+        border-radius: 20px;
+        top: 7px;
+        left: 10px;
+        z-index: -1;
+      }
+    }
+  }
+}
+// **************About company section end**************
+
+// **************Our Goal section start**************
+.our-goal {
+  margin-top: 90px;
+  padding: 63px 115px;
+  background: $linear_bg;
+  border-radius: $b_radius_card;
+  h1 {
+    margin-bottom: 21px;
+    color: $white;
+  }
+  p {
+    font-family: 'OpenSans-SemiBold', sans-serif;
+    font-weight: 600;
+    @include text_dimensions(25px, 160%, center, $white);
+  }
+}
+// **************Our Goal section end**************
+
+// **************Activities section start**************
+.activities {
+  margin-top: 132px;
+  h1 {
+    color: $royal_night;
+    margin-bottom: 55px;
+  }
+  h2 {
+    font-family: 'ObjectSans-Heavy', sans-serif;
+    font-weight: 800;
+    @include text_dimensions(30px, 31px, null, $aare_river);
+    margin-bottom: 21px;
+  }
+  p {
+    font-family: 'OpenSans-Regular', sans-serif;
+    font-weight: 400;
+    @include text_dimensions(18px, 160%, null, $grey_20);
+    span {
+      color: $royal_night;
+      font-family: 'OpenSans-Bold', sans-serif;
+    }
+  }
+  &__flex {
+    display: flex;
+    margin-top: 26px;
+    margin-bottom: 92px;
+    .app-button {
+      padding: 16px 54px;
+    }
+    &-left {
+      width: calc(100% - 527px);
+      padding-right: 60px;
+    }
+    &-right {
+      width: 527px;
+      position: relative;
+      z-index: 2;
+      &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: $linear_bg;
+        border-radius: 20px;
+        top: 7px;
+        left: 10px;
+        z-index: -1;
+      }
+    }
+  }
+}
+// **************Activities section end **************
 
 // **************Popular directions section start**************
 .popular-direction {
@@ -864,6 +992,101 @@ input {
   }
 }
 // **************Our results section end**************
+
+// **************Our adventages section start**************
+.our-adventages {
+  padding: 80px 0 22px 0;
+  @include m_query(desktop) {
+    padding: 50px 15px 50px 15px;
+  }
+  @include m_query(tablet_two) {
+    padding: 50px 15px 50px 15px;
+  }
+  @include m_query(tablet) {
+    padding: 40px 15px 40px 15px;
+  }
+  @include m_query(phone) {
+    padding: 30px 15px 30px 15px;
+  }
+  h1 {
+    color: $royal_night;
+    margin-bottom: 25px;
+  }
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    &-sub {
+      width: calc(33.33% - 24px);
+      margin-bottom: 25px;
+      p {
+        font-family: 'OpenSans-Regular', sans-serif;
+        @include text_dimensions(22px, 140%, null, $shuttle_grey);
+        font-weight: 400;
+        @include m_query(tablet_two) {
+          text-align: center;
+        }
+        @include m_query(tablet) {
+          text-align: center;
+        }
+        @include m_query(phone) {
+          text-align: center;
+        }
+      }
+      @include m_query(tablet_two) {
+        width: 50%;
+        padding: 0 15px;
+      }
+      @include m_query(tablet) {
+        width: 50%;
+        padding: 0 15px;
+      }
+      @include m_query(phone) {
+        width: 100%;
+        padding: 0 15px;
+      }
+    }
+  }
+  &__textflex {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    @include m_query(tablet_two) {
+      justify-content: center;
+    }
+    @include m_query(tablet) {
+      justify-content: center;
+    }
+    @include m_query(phone) {
+      justify-content: center;
+    }
+    &-left {
+      & .number {
+        font-family: 'ObjectSans-Regular', sans-serif;
+        font-weight: 400;
+        @include text_dimensions(120px, null, null, null);
+        background: linear-gradient(315.29deg, #00bf9f 9.8%, #364bcc 64.19%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        @include m_query(tablet_two) {
+          @include text_dimensions(7.375em, null, null, null);
+        }
+        @include m_query(tablet) {
+          @include text_dimensions(5.375em, null, null, null);
+        }
+        @include m_query(phone) {
+          @include text_dimensions(5.375em, null, null, null);
+        }
+      }
+    }
+    &-right {
+      margin-top: -4em;
+    }
+  }
+}
+// **************Our adventages section end**************
 
 // **************Breadcrumb section start**************
 .breadcrumb {
