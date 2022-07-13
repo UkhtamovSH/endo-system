@@ -13,7 +13,7 @@
 
 
    <!-- Navigation section start -->
-   <!-- <section class="navigation-two">
+   <section class="navigation-two">
       <nav class="">
          <div class="navigation-two__flex container">
             <div class="navigation-two__flex-left">
@@ -31,11 +31,11 @@
             </div>
          </div>
       </nav>
-   </section> -->
+   </section>
    <!-- Navigation section start -->
 
    <!-- Breadcrumb section start -->
-   <!-- <section class="breadcrumb container">
+   <section class="breadcrumb container">
       <div class="breadcrumb__flex">
          <div class="breadcrumb__flex-left">
             <span>
@@ -45,7 +45,7 @@
             <span class="active">Проекты</span>
          </div>
       </div>
-   </section> -->
+   </section>
    <!-- Breadcrumb section end -->
 
 
@@ -272,16 +272,20 @@
       },
    ]
 
-   let text = `<div>`;
+
+   let text = "<ul>";
    for (let i = 0; i < arr.length; i++) {
-      text += `<div class='regElement' id="${arr[i].id}" onclick="func(${arr[i].id}); displayNoneElem()">`
-         + `<div class="leftright">` +
-         + `<div class="left">` + arr[i].region + `</div>`
-         + `<div class="right">` + arr[i].medicalCenter.length + `</div>`
-         + `</div>`
-         ;
+      text += `<li class='regElement' id="${arr[i].id}" onclick="func(${arr[i].id}); displayNoneElem()">`
+         + `<span class="regElementSub">` +
+         `<span class="left">` + arr[i].region + `</span>`
+         + `<span class="right">` + arr[i].medicalCenter.length + `</span>` +
+         `</span>`
+      "</li>";
    }
-   text += `</div>`;
+   text += "</ul>";
+
+
+
 
    document.getElementById("project_link").innerHTML = text;
 
@@ -294,7 +298,7 @@
          });
          if (id === arr[i].id) {
             text2 += `<div class="project_linkinfo">` +
-               `<div class='back' onclick="removeElem()">`
+               `<div class='back' onclick="removeElem()" style="cursor: pointer; display: inline-block;">`
                + `<img src="/img/svg/arrow_back.svg" style="margin-right: 6px;" alt=""> Назад` +
                `</div>`
                + `<p class="title">` + arr[i].region + `</p>`

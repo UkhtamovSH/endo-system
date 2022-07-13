@@ -534,24 +534,47 @@ input {
           justify-content: space-between;
           width: 100%;
         }
+        #project_link2 {
+          margin-top: -20px;
+        }
         #project_link {
           box-shadow: $box_shadow_card;
           border-radius: $default_b_radius;
-          padding: 10px 20px;
-
+          // padding: 10px 20px;
+          ul {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 0;
+            margin-bottom: 20px;
+            list-style: none;
+            li {
+              &:nth-child(1) {
+                padding-top: 10px;
+              }
+            }
+          }
           .regElement {
             @include text_dimensions(18px, null, null, $grey_20);
             font-family: 'OpenSans-Regular', sans-serif;
             font-weight: 400;
             cursor: pointer;
             transition: 400ms;
-            .left {
+            .regElementSub {
+              display: flex;
+              padding: 6px 20px 10px 20px;
+              justify-content: space-between;
               &:hover {
-                color: $royal_night;
+                .left {
+                  color: $royal_night;
+                }
               }
             }
             .right {
-              text-align: right;
+              font-family: 'OpenSans-Bold', sans-serif;
+              font-weight: 700;
+              @include text_dimensions(18px, 150%, null, $aare_river);
             }
           }
         }
