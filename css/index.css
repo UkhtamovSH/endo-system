@@ -914,6 +914,22 @@ input:focus {
   width: 100%;
 }
 
+.projects__flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projects__flex-left {
+  width: 346px;
+}
+
+.projects__flex-right {
+  height: -webkit-calc(100%-346px);
+  height: calc(100%-346px);
+}
+
 .popular-direction {
   padding: 39px 44px 72px 44px;
   -webkit-box-shadow: 0px 8px 28px -6px rgba(103, 103, 103, 0.1), 0px 18px 88px -4px rgba(103, 103, 103, 0.1);

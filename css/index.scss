@@ -522,6 +522,20 @@ input {
 }
 // **************Contacts section end**************
 
+// **************Projects section start**************
+.projects {
+  &__flex {
+    display: flex;
+    &-left {
+      width: 346px;
+    }
+    &-right {
+      height: calc(100%-346px);
+    }
+  }
+}
+// **************Projects section end**************
+
 // **************Popular directions section start**************
 .popular-direction {
   padding: 39px 44px 72px 44px;
