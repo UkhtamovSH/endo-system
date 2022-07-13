@@ -13,7 +13,7 @@
 
 
    <!-- Navigation section start -->
-   <section class="navigation-two">
+   <!-- <section class="navigation-two">
       <nav class="">
          <div class="navigation-two__flex container">
             <div class="navigation-two__flex-left">
@@ -31,11 +31,11 @@
             </div>
          </div>
       </nav>
-   </section>
+   </section> -->
    <!-- Navigation section start -->
 
    <!-- Breadcrumb section start -->
-   <section class="breadcrumb container">
+   <!-- <section class="breadcrumb container">
       <div class="breadcrumb__flex">
          <div class="breadcrumb__flex-left">
             <span>
@@ -45,23 +45,22 @@
             <span class="active">Проекты</span>
          </div>
       </div>
-   </section>
+   </section> -->
    <!-- Breadcrumb section end -->
 
 
    <section class="projects container">
       <div class="projects__flex">
          <div class="projects__flex-left">
-            <div class="card" id="card">
-
+            <div class="card">
+               <div class="" id="project_link"></div>
+               <div class="" id="project_link2"></div>
             </div>
          </div>
          <div class="projects__flex-right"></div>
       </div>
    </section>
 
-   <p id="demo"></p>
-   <p id="demo2"></p>
 
 </body>
 <script src="/js/jQuery.js"></script>
@@ -273,51 +272,55 @@
       },
    ]
 
-   let text = "<ul>";
+   let text = `<div>`;
    for (let i = 0; i < arr.length; i++) {
-      text += `<li class='regionElement' onclick="func(${arr[i].id})">`
-         + arr[i].region +
-         "</li>";
-
+      text += `<div class='regElement' id="${arr[i].id}" onclick="func(${arr[i].id}); displayNoneElem()">`
+         + `<div class="leftright">` +
+         + `<div class="left">` + arr[i].region + `</div>`
+         + `<div class="right">` + arr[i].medicalCenter.length + `</div>`
+         + `</div>`
+         ;
    }
-   text += "</ul>";
+   text += `</div>`;
 
-   document.getElementById("demo").innerHTML = text;
+   document.getElementById("project_link").innerHTML = text;
 
    function func(id) {
-      let text2 = "<ul>";
+      let text2 = "<div>";
       for (let i = 0; i < arr.length; i++) {
+         let fromMap = " ";
+         arr[i].medicalCenter.map(function (item) {
+            fromMap += '<p>' + item.title + '</p>';
+         });
          if (id === arr[i].id) {
-            text2 += "<li>"
-               + "<h1>" + arr[i].region + "</h1>" +
-               "<p>" + arr[i].medicalCenter.map(getInfo) + "</p>" +
-               "</li>";
-         } else {
+            text2 += `<div class="project_linkinfo">` +
+               `<div class='back' onclick="removeElem()">`
+               + `<img src="/img/svg/arrow_back.svg" style="margin-right: 6px;" alt=""> Назад` +
+               `</div>`
+               + `<p class="title">` + arr[i].region + `</p>`
+               + `<div class='project_links'>` +
+               fromMap
+               +
+               `</div>` +
+               `</div>`;
          }
       }
-      text2 += "</ul>";
+      text2 += "</div>";
+
 
       function getInfo(item) {
          return item.title
       }
-
-      document.getElementById("demo2").innerHTML = text2;
+      document.getElementById("project_link2").innerHTML = text2;
    }
 
-
-
-
-   // const persons = [
-   //    { firstname: "Malcom", lastname: "Reynolds" },
-   //    { firstname: "Kaylee", lastname: "Frye" },
-   //    { firstname: "Jayne", lastname: "Cobb" }
-   // ];
-
-   // document.getElementById("demo").innerHTML = persons.map(getFullName);
-
-   // function getFullName(item) {
-   //    return [item.firstname, item.lastname].join(" ");
-   // }
+   function displayNoneElem() {
+      $('.regElement').addClass('activeLi');
+   }
+   function removeElem() {
+      document.getElementById("project_link2").innerHTML = "";
+      $('.regElement').removeClass('activeLi');
+   }
 
 
 
