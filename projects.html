@@ -59,6 +59,80 @@
          </div>
          <div class="projects__flex-right"></div>
       </div>
+      <div class="projects__main">
+         <p class="text1">Клиника "Dr Boboev Health Center"</p>
+         <p class="text2">Кашкадарьинская область</p>
+         <div class="projects__main__flex">
+            <div class="projects__main__flex-left">
+               <p class="text2">
+                  Клиника "Dr Boboev Health Center" является ведущей частной клиникой в Республике в сферах Эндоурологии
+                  и
+                  Лапароскопии! Нашей компанией клиника была оснащена под ключ и были установлены следующие оборудования
+                  и
+                  наборы инструментов:
+               </p>
+               <p class="text2">1. Эндоурологические и лапароскопические комплекты инструментов и видеосистем от RZ
+                  MEDIZINTECHNIK GmbH</p>
+               <p class="text2">2. Рентген-хирургическая установка С-дуга</p>
+               <p class="text2">3. Гольмиевый лазер</p>
+               <p class="text2">4. Контактный литотриптор</p>
+               <p class="text2">5. Оборудования для операционного блока</p>
+               <p class="text2">6. Стационарные и портативные УЗИ аппараты от ALPINION</p>
+               <p class="text2">7. Стерилизационный комплекc от LAOKEN</p>
+            </div>
+            <div class="projects__main__flex-right">
+               <div class="video" id="video" onclick="playVideo()">
+                  <div class="circle pulse"></div>
+                  <div class="circle_header"></div>
+                  <div class="play_icon">
+                     <img src="/img/svg/play_icon.svg" alt="">
+                  </div>
+                  <img src="/img/projectimg1.png" alt="">
+               </div>
+            </div>
+
+         </div>
+      </div>
+      <div class="card_product_img">
+         <div class="product_imgs">
+            <div class="img-display">
+               <div class="img-showcase">
+                  <img src="/img/slider_project_img1.png" alt="Project img">
+                  <img src="/img/slider_project_img2.png" alt="Project img">
+                  <img src="/img/slider_project_img3.png" alt="Project img">
+                  <img src="/img/slider_project_img4.png" alt="Project img">
+                  <img src="/img/slider_project_img5.png" alt="Project img">
+               </div>
+            </div>
+            <div class="img-select">
+               <div class="img-item">
+                  <a href="#" data-id="1">
+                     <img src="/img/slider_project_img1.png" alt="Project img">
+                  </a>
+               </div>
+               <div class="img-item">
+                  <a href="#" data-id="2">
+                     <img src="/img/slider_project_img2.png" alt="Project img">
+                  </a>
+               </div>
+               <div class="img-item">
+                  <a href="#" data-id="3">
+                     <img src="/img/slider_project_img3.png" alt="Project img">
+                  </a>
+               </div>
+               <div class="img-item">
+                  <a href="#" data-id="4">
+                     <img src="/img/slider_project_img4.png" alt="Project img">
+                  </a>
+               </div>
+               <div class="img-item">
+                  <a href="#" data-id="5">
+                     <img src="/img/slider_project_img5.png" alt="Project img">
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
    </section>
 
 
@@ -66,12 +140,42 @@
 <script src="/js/jQuery.js"></script>
 <script src="/js/app.js"></script>
 <script type="text/javascript">
+
+   // slider start
+   const imgs = document.querySelectorAll('.img-select a');
+   const imgBtns = [...imgs];
+   let imgId = 1;
+
+   imgBtns.forEach((imgItem) => {
+      imgItem.addEventListener('click', (event) => {
+         event.preventDefault();
+         imgId = imgItem.dataset.id;
+         slideImage();
+      });
+   });
+
+   function slideImage() {
+      const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
+
+      document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+   }
+
+   window.addEventListener('resize', slideImage);
+
+   // slider end
+
+
+   // function playVideo() {
+   //    let
+   // }
+
    let arr = [
       {
          id: 1,
          region: 'г. Ташкент',
          medicalCenter: [
             {
+               id: 1,
                title: 'Yunusobod Medical Center',
                info: {
                   title: 'Клиника "Dr Boboev Health Center"',
@@ -79,6 +183,7 @@
                }
             },
             {
+               id: 2,
                title: 'Sabo Darmon',
                info: {
                   title: 'Клиника Sabo Darmon',
@@ -86,6 +191,7 @@
                }
             },
             {
+               id: 3,
                title: 'Saxovat BU',
                info: {
                   title: 'Клиника Saxovat BU',
@@ -99,6 +205,7 @@
          region: 'Андижанская область',
          medicalCenter: [
             {
+               id: 1,
                title: 'Safo Tibbiyot',
                info: {
                   title: 'Клиника Safo Tibbiyot',
@@ -106,6 +213,7 @@
                }
             },
             {
+               id: 2,
                title: 'Salomat Hayot',
                info: {
                   title: 'Клиника Salomat Hayot',
@@ -119,6 +227,7 @@
          region: 'Ферганская область',
          medicalCenter: [
             {
+               id: 1,
                title: 'Safo Tibbiyot',
                info: {
                   title: 'Клиника Safo Tibbiyot',
@@ -132,6 +241,7 @@
          region: 'Бухарская область',
          medicalCenter: [
             {
+               id: 1,
                title: 'Safo Tibbiyot',
                info: {
                   title: 'Клиника Safo Tibbiyot',
@@ -145,6 +255,7 @@
          region: 'Кашкадарьинская область',
          medicalCenter: [
             {
+               id: 1,
                title: 'Safo Tibbiyot',
                info: {
                   title: 'Клиника Safo Tibbiyot',
@@ -158,6 +269,7 @@
          region: 'Самаркандская область',
          medicalCenter: [
             {
+               id: 1,
                title: 'Safo Tibbiyot',
                info: {
                   title: 'Клиника Safo Tibbiyot',
@@ -171,6 +283,7 @@
          region: 'Хорезмская область',
          medicalCenter: [
             {
+               id: 1,
                title: 'Safo Tibbiyot',
                info: {
                   title: 'Клиника Safo Tibbiyot',
@@ -184,6 +297,7 @@
          region: 'Сурхандарьинская область',
          medicalCenter: [
             {
+               id: 1,
                title: 'Safo Tibbiyot',
                info: {
                   title: 'Клиника Safo Tibbiyot',
@@ -197,6 +311,7 @@
          region: 'Наманганская область',
          medicalCenter: [
             {
+               id: 1,
                title: 'Safo Tibbiyot',
                info: {
                   title: 'Клиника Safo Tibbiyot',
@@ -210,6 +325,7 @@
          region: 'Сырдарьинская область',
          medicalCenter: [
             {
+               id: 1,
                title: 'Safo Tibbiyot',
                info: {
                   title: 'Клиника Safo Tibbiyot',
@@ -223,6 +339,7 @@
          region: 'Джизакская область',
          medicalCenter: [
             {
+               id: 1,
                title: 'Safo Tibbiyot',
                info: {
                   title: 'Клиника Safo Tibbiyot',
@@ -236,6 +353,7 @@
          region: 'Республика Каракалпакстан',
          medicalCenter: [
             {
+               id: 1,
                title: 'Safo Tibbiyot',
                info: {
                   title: 'Клиника Safo Tibbiyot',
@@ -249,6 +367,7 @@
          region: 'Ташкентская область',
          medicalCenter: [
             {
+               id: 1,
                title: 'Safo Tibbiyot',
                info: {
                   title: 'Клиника Safo Tibbiyot',
@@ -262,6 +381,7 @@
          region: 'Навоийская область',
          medicalCenter: [
             {
+               id: 1,
                title: 'Safo Tibbiyot',
                info: {
                   title: 'Клиника Safo Tibbiyot',
@@ -294,7 +414,7 @@
       for (let i = 0; i < arr.length; i++) {
          let fromMap = " ";
          arr[i].medicalCenter.map(function (item) {
-            fromMap += '<p>' + item.title + '</p>';
+            fromMap += `<p onclick="myF(${item.id})">` + item.title + `</p>`;
          });
          if (id === arr[i].id) {
             text2 += `<div class="project_linkinfo">` +
@@ -308,8 +428,13 @@
                `</div>` +
                `</div>`;
          }
+
       }
       text2 += "</div>";
+
+      function myF(id) {
+         console.log(id);
+      }
 
 
       function getInfo(item) {
@@ -317,6 +442,11 @@
       }
       document.getElementById("project_link2").innerHTML = text2;
    }
+
+
+
+
+
 
    function displayNoneElem() {
       $('.regElement').addClass('activeLi');

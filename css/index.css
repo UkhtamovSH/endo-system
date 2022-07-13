@@ -1052,6 +1052,215 @@ input:focus {
   height: calc(100%-346px);
 }
 
+.projects__main {
+  margin-top: 120px;
+}
+
+.projects__main .text1 {
+  font-family: 'OpenSans-SemiBold', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 150%;
+  color: #2c3e9a;
+}
+
+.projects__main .text2 {
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: #333333;
+}
+
+.projects__main__flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+}
+
+.projects__main__flex-left {
+  width: -webkit-calc(100% - 465px);
+  width: calc(100% - 465px);
+}
+
+.projects__main__flex-right {
+  width: 465px;
+}
+
+.projects__main__flex-right .video {
+  position: relative;
+  cursor: pointer;
+}
+
+.projects__main__flex-right .video img {
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+}
+
+.projects__main__flex-right .video .play_icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.projects__main__flex-right .video .play_icon img {
+  -webkit-border-radius: 0;
+          border-radius: 0;
+}
+
+.projects__main__flex-right .video .circle_header {
+  position: absolute;
+  width: 78px;
+  height: 78px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: #ffffff;
+  margin: auto;
+}
+
+.projects__main__flex-right .video .circle {
+  width: 95px;
+  height: 95px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  margin: auto;
+}
+
+.projects__main__flex-right .video .circle.pulse {
+  background: #ffffff;
+  opacity: 0.3;
+  -webkit-box-shadow: 0px 4px 27px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 27px rgba(0, 0, 0, 0.25);
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation: pulse 2s infinite;
+          animation: pulse 2s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.13, 1.13);
+            transform: scale(1.13, 1.13);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.13, 1.13);
+            transform: scale(1.13, 1.13);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+.projects .product_imgs {
+  margin-top: 63px;
+}
+
+.projects .product_imgs img {
+  width: 100%;
+  display: block;
+}
+
+.projects .product_imgs .img-display {
+  overflow: hidden;
+}
+
+.projects .product_imgs .img-showcase {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.projects .product_imgs .img-showcase img {
+  min-width: 100%;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+}
+
+.projects .product_imgs .img-select {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+}
+
+.projects .product_imgs .img-select img {
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+}
+
+.projects .product_imgs .img-item {
+  margin: 18px 0;
+}
+
+.projects .product_imgs .img-item img {
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+}
+
+.projects .product_imgs .img-item:hover {
+  opacity: 0.8;
+}
+
 .activeLi {
   display: none;
 }
