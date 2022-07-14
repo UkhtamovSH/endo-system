@@ -458,6 +458,18 @@ input {
 
 // **************About company section start**************
 .aboutcompany-header {
+  @include m_query(desktop) {
+    padding: 0 15px 0 15px;
+  }
+  @include m_query(tablet_two) {
+    padding: 0 15px 0 15px;
+  }
+  @include m_query(tablet) {
+    padding: 0 15px 0 15px;
+  }
+  @include m_query(phone) {
+    padding: 0 15px 0 15px;
+  }
   h1 {
     color: $royal_night;
     margin-bottom: 34px;
@@ -497,14 +509,61 @@ input {
   &__flex {
     display: flex;
     margin-bottom: 12px;
+    @include m_query(tablet_two) {
+      flex-direction: column;
+    }
+    @include m_query(tablet) {
+      flex-direction: column;
+    }
+    @include m_query(phone) {
+      flex-direction: column;
+    }
     &-left {
       width: calc(100% - 527px);
       padding-right: 60px;
+      @include m_query(tablet_two) {
+        width: 100%;
+      }
+      @include m_query(tablet) {
+        width: 100%;
+      }
+      @include m_query(phone) {
+        width: 100%;
+      }
     }
     &-right {
       width: 527px;
+      height: 394px;
       position: relative;
       z-index: 2;
+      img {
+        object-fit: cover;
+        border-radius: 20px;
+      }
+      @include m_query(tablet_two) {
+        height: 394px;
+        margin-top: 20px;
+        img {
+          width: 100%;
+        }
+      }
+      @include m_query(tablet) {
+        height: 394px;
+        margin-top: 20px;
+        img {
+          width: 100%;
+          height: 394px;
+        }
+      }
+      @include m_query(phone) {
+        width: 100%;
+        height: 394px;
+        margin-top: 20px;
+        img {
+          width: 100%;
+          height: 394px;
+        }
+      }
       &::after {
         position: absolute;
         content: '';
@@ -512,7 +571,7 @@ input {
         height: 100%;
         background: $linear_bg;
         border-radius: 20px;
-        top: 7px;
+        top: 10px;
         left: 10px;
         z-index: -1;
       }
@@ -527,6 +586,22 @@ input {
   padding: 63px 115px;
   background: $linear_bg;
   border-radius: $b_radius_card;
+  @include m_query(desktop) {
+    padding: 63px 35px 63px 35px;
+    border-radius: 0;
+  }
+  @include m_query(tablet_two) {
+    padding: 63px 35px 63px 35px;
+    border-radius: 0;
+  }
+  @include m_query(tablet) {
+    padding: 63px 35px 63px 35px;
+    border-radius: 0;
+  }
+  @include m_query(phone) {
+    padding: 63px 15px 63px 15px;
+    border-radius: 0;
+  }
   h1 {
     margin-bottom: 21px;
     color: $white;
@@ -535,6 +610,18 @@ input {
     font-family: 'OpenSans-SemiBold', sans-serif;
     font-weight: 600;
     @include text_dimensions(25px, 160%, center, $white);
+    @include m_query(desktop) {
+      font-size: 18px;
+    }
+    @include m_query(tablet_two) {
+      font-size: 18px;
+    }
+    @include m_query(tablet) {
+      font-size: 18px;
+    }
+    @include m_query(phone) {
+      font-size: 18px;
+    }
   }
 }
 // **************Our Goal section end**************
@@ -542,15 +629,49 @@ input {
 // **************Activities section start**************
 .activities {
   margin-top: 132px;
+  @include m_query(desktop) {
+    padding: 0 15px 0 15px;
+    margin-top: 50px;
+  }
+  @include m_query(tablet_two) {
+    padding: 0 15px 0 15px;
+    margin-top: 50px;
+  }
+  @include m_query(tablet) {
+    padding: 0 15px 0 15px;
+    margin-top: 50px;
+  }
+  @include m_query(phone) {
+    padding: 0 15px 0 15px;
+    margin-top: 50px;
+  }
   h1 {
     color: $royal_night;
     margin-bottom: 55px;
+    @include m_query(tablet_two) {
+      margin-bottom: 20px;
+    }
+    @include m_query(tablet) {
+      margin-bottom: 20px;
+    }
+    @include m_query(phone) {
+      margin-bottom: 20px;
+    }
   }
   h2 {
     font-family: 'ObjectSans-Heavy', sans-serif;
     font-weight: 800;
     @include text_dimensions(30px, 31px, null, $aare_river);
     margin-bottom: 21px;
+    @include m_query(tablet_two) {
+      font-size: 22px;
+    }
+    @include m_query(tablet) {
+      font-size: 22px;
+    }
+    @include m_query(phone) {
+      font-size: 22px;
+    }
   }
   p {
     font-family: 'OpenSans-Regular', sans-serif;
@@ -565,17 +686,66 @@ input {
     display: flex;
     margin-top: 26px;
     margin-bottom: 92px;
+    @include m_query(tablet_two) {
+      flex-direction: column;
+      margin-bottom: 32px;
+    }
+    @include m_query(tablet) {
+      flex-direction: column;
+      margin-bottom: 32px;
+    }
+    @include m_query(phone) {
+      flex-direction: column;
+      margin-bottom: 32px;
+    }
     .app-button {
       padding: 16px 54px;
     }
     &-left {
       width: calc(100% - 527px);
       padding-right: 60px;
+      @include m_query(tablet_two) {
+        width: 100%;
+      }
+      @include m_query(tablet) {
+        width: 100%;
+      }
+      @include m_query(phone) {
+        width: 100%;
+      }
     }
     &-right {
       width: 527px;
       position: relative;
       z-index: 2;
+      img {
+        object-fit: cover;
+        border-radius: 20px;
+      }
+      @include m_query(tablet_two) {
+        height: 394px;
+        margin-top: 20px;
+        img {
+          width: 100%;
+        }
+      }
+      @include m_query(tablet) {
+        height: 394px;
+        margin-top: 20px;
+        img {
+          width: 100%;
+          height: 394px;
+        }
+      }
+      @include m_query(phone) {
+        width: 100%;
+        height: 394px;
+        margin-top: 20px;
+        img {
+          width: 100%;
+          height: 394px;
+        }
+      }
       &::after {
         position: absolute;
         content: '';
@@ -594,6 +764,18 @@ input {
 
 // **************Contacts section start**************
 .contacts {
+  @include m_query(desktop) {
+    padding: 0 15px 0 15px;
+  }
+  @include m_query(tablet_two) {
+    padding: 0 15px 0 15px;
+  }
+  @include m_query(tablet) {
+    padding: 0 15px 0 15px;
+  }
+  @include m_query(phone) {
+    padding: 0 15px 0 15px;
+  }
   h1 {
     color: $royal_night;
     text-align: left;
@@ -608,17 +790,73 @@ input {
     margin-top: 58px;
     display: flex;
     justify-content: space-between;
+    @include m_query(tablet_two) {
+      flex-wrap: wrap;
+      width: 100%;
+      & > a {
+        &:nth-child(1) {
+          width: calc(50% - 10px);
+          margin: 10px 0;
+        }
+        &:nth-child(2) {
+          margin: 10px 0 !important;
+          width: calc(50% - 10px);
+        }
+        &:nth-child(3) {
+          margin: 10px 0;
+          width: calc(50% - 10px);
+        }
+      }
+    }
+    @include m_query(tablet) {
+      flex-wrap: wrap;
+      width: 100%;
+      & > a {
+        &:nth-child(1) {
+          width: 100%;
+          margin: 10px 0;
+        }
+        &:nth-child(2) {
+          margin: 10px 0 !important;
+          width: 100%;
+        }
+        &:nth-child(3) {
+          margin: 10px 0;
+          width: 100%;
+        }
+      }
+    }
+
+    @include m_query(phone) {
+      flex-wrap: wrap;
+      width: 100%;
+      & > a {
+        &:nth-child(1) {
+          width: 100%;
+          margin: 10px 0;
+        }
+        &:nth-child(2) {
+          margin: 10px 0 !important;
+          width: 100%;
+        }
+        &:nth-child(3) {
+          margin: 10px 0;
+          width: 100%;
+        }
+      }
+    }
+
     & > a {
-      &:nth-child(1) {
-        width: auto;
-      }
+      // &:nth-child(1) {
+      //   width: auto;
+      // }
       &:nth-child(2) {
-        width: auto;
-        margin: 0 49px;
+        // width: auto;
+        margin: 0 29px;
       }
-      &:nth-child(3) {
-        width: auto;
-      }
+      // &:nth-child(3) {
+      //   width: auto;
+      // }
     }
   }
   &__contact {
@@ -664,8 +902,33 @@ input {
     display: flex;
     margin-top: 68px;
     margin-bottom: 91px;
+
+    // @include m_query(desktop) {
+    //   flex-direction: column;
+    // }
+    @include m_query(tablet_two) {
+      flex-direction: column;
+    }
+    @include m_query(tablet) {
+      flex-direction: column;
+    }
+    @include m_query(phone) {
+      flex-direction: column;
+    }
     &-left {
       width: calc(100% - 583px);
+      @include m_query(tablet_two) {
+        order: 2;
+        width: 100%;
+      }
+      @include m_query(tablet) {
+        order: 2;
+        width: 100%;
+      }
+      @include m_query(phone) {
+        order: 2;
+        width: 100%;
+      }
       .info {
         margin-bottom: 40px;
         &:nth-last-child(1) {
@@ -699,7 +962,34 @@ input {
     }
     &-right {
       width: 583px;
+      @include m_query(tablet_two) {
+        order: 1;
+        width: 100%;
+      }
+      @include m_query(tablet) {
+        order: 1;
+        width: 100%;
+      }
+      @include m_query(phone) {
+        order: 1;
+        width: 100%;
+      }
       .submit-app {
+        @include m_query(desktop) {
+          border-radius: 20px;
+        }
+        @include m_query(tablet_two) {
+          border-radius: 20px;
+          margin-bottom: 30px;
+        }
+        @include m_query(tablet) {
+          border-radius: 20px;
+          margin-bottom: 30px;
+        }
+        @include m_query(phone) {
+          border-radius: 20px;
+          margin-bottom: 30px;
+        }
         h1 {
           text-align: center;
           color: $white;
@@ -707,6 +997,12 @@ input {
         &__input {
           padding: 0 50px;
           text-align: center;
+          @include m_query(tablet) {
+            padding: 0 15px;
+          }
+          @include m_query(phone) {
+            padding: 0 15px;
+          }
           .send_btn {
             width: 175px;
             height: 57px;
