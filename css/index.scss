@@ -133,6 +133,39 @@ input {
           box-shadow: $box_shadow_card_slider;
         }
       }
+      .mobile_icon {
+        display: none;
+        color: $royal_night;
+        font-size: 35px;
+        cursor: pointer;
+      }
+      @include m_query(tablet_two) {
+        .nav_link,
+        .nav_link_btn {
+          display: none;
+        }
+        .mobile_icon {
+          display: block;
+        }
+      }
+      @include m_query(tablet) {
+        .nav_link,
+        .nav_link_btn {
+          display: none;
+        }
+        .mobile_icon {
+          display: block;
+        }
+      }
+      @include m_query(phone) {
+        .nav_link,
+        .nav_link_btn {
+          display: none;
+        }
+        .mobile_icon {
+          display: block;
+        }
+      }
     }
   }
   nav {
@@ -144,6 +177,18 @@ input {
     padding: 16px 0;
     box-sizing: border-box;
     transition: 0.4s;
+    @include m_query(desktop) {
+      padding: 16px 15px 16px 15px;
+    }
+    @include m_query(tablet_two) {
+      padding: 16px 15px 16px 15px;
+    }
+    @include m_query(tablet) {
+      padding: 16px 15px 16px 15px;
+    }
+    @include m_query(phone) {
+      padding: 16px 15px 16px 15px;
+    }
   }
   nav.scrollnav {
     background: $white;
@@ -189,6 +234,39 @@ input {
           box-shadow: $box_shadow_card_slider;
         }
       }
+      .mobile_icon {
+        display: none;
+        color: $royal_night;
+        font-size: 35px;
+        cursor: pointer;
+      }
+      @include m_query(tablet_two) {
+        .nav_link,
+        .nav_link_btn {
+          display: none;
+        }
+        .mobile_icon {
+          display: block;
+        }
+      }
+      @include m_query(tablet) {
+        .nav_link,
+        .nav_link_btn {
+          display: none;
+        }
+        .mobile_icon {
+          display: block;
+        }
+      }
+      @include m_query(phone) {
+        .nav_link,
+        .nav_link_btn {
+          display: none;
+        }
+        .mobile_icon {
+          display: block;
+        }
+      }
     }
   }
   nav {
@@ -197,14 +275,82 @@ input {
     top: 0;
     left: 0;
     width: 100%;
-    // padding: 16px 0;
     box-sizing: border-box;
     transition: 0.4s;
     background: $white;
     box-shadow: $box_shadow_nav;
-    // img {
-    //   width: 70px;
-    // }
+    @include m_query(desktop) {
+      padding: 0 15px 0 15px;
+    }
+    @include m_query(tablet_two) {
+      padding: 0 15px 0 15px;
+    }
+    @include m_query(tablet) {
+      padding: 0 15px 0 15px;
+    }
+    @include m_query(phone) {
+      padding: 0 15px 0 15px;
+    }
+  }
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #818181;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    .navigationSecondSubLink {
+      font-family: 'ObjectSans-Heavy', sans-serif;
+      font-weight: 800;
+      @include text_dimensions(30px, null, null, $royal_night);
+      padding: 8px;
+      text-decoration: none;
+      display: block;
+      transition: 0.3s;
+      @include m_query(tablet) {
+        font-size: 20px;
+      }
+      @include m_query(phone) {
+        font-size: 20px;
+      }
+      &:hover,
+      &:focus {
+        color: #3d50b0;
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {
+    .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+    .navigationSecondSubLink {
+      font-size: 20px;
+    }
   }
 }
 
@@ -215,6 +361,18 @@ input {
   position: relative;
   padding-top: 100px;
   padding-bottom: 71px;
+  @include m_query(desktop) {
+    padding: 100px 15px 71px 15px;
+  }
+  @include m_query(tablet_two) {
+    padding: 100px 15px 71px 15px;
+  }
+  @include m_query(tablet) {
+    padding: 100px 15px 71px 15px;
+  }
+  @include m_query(phone) {
+    padding: 100px 15px 71px 15px;
+  }
   .header_img {
     position: absolute;
     top: 0;
@@ -229,9 +387,50 @@ input {
     z-index: 1;
     display: flex;
     align-items: center;
+
+    @include m_query(tablet) {
+      flex-direction: column;
+    }
+    @include m_query(phone) {
+      flex-direction: column;
+    }
     &-left {
       width: calc(100% - 360px);
       padding-right: 80px;
+      @include m_query(desktop) {
+        padding-right: 20px;
+        width: 100%;
+      }
+      @include m_query(tablet_two) {
+        padding-right: 20px;
+        width: 100%;
+        h1 {
+          font-size: 33px !important;
+        }
+        p {
+          width: 100% !important;
+        }
+      }
+      @include m_query(tablet) {
+        padding-right: 0px;
+        width: 100%;
+        h1 {
+          font-size: 33px !important;
+        }
+        p {
+          width: 100% !important;
+        }
+      }
+      @include m_query(phone) {
+        padding-right: 0px;
+        width: 100%;
+        h1 {
+          font-size: 27px !important;
+        }
+        p {
+          width: 100% !important;
+        }
+      }
       h1 {
         @include text_dimensions(40px, 150%, left, null);
 
@@ -797,6 +996,12 @@ input {
     @include text_dimensions(35px, 48px, center, $grey_20);
     font-family: 'OpenSans-Bold', sans-serif;
     font-weight: 700;
+    @include m_query(tablet) {
+      font-size: 25px;
+    }
+    @include m_query(phone) {
+      font-size: 25px;
+    }
   }
   &__flex {
     display: flex;
@@ -805,6 +1010,18 @@ input {
     &-sub {
       width: 20%;
       margin-top: 52px;
+      @include m_query(desktop) {
+        width: 25%;
+      }
+      @include m_query(tablet_two) {
+        width: 33.33%;
+      }
+      @include m_query(tablet) {
+        width: 50%;
+      }
+      @include m_query(phone) {
+        width: 100%;
+      }
       .popular-img {
         display: flex;
         justify-content: center;
@@ -932,6 +1149,25 @@ input {
         display: flex;
         justify-content: center;
         box-shadow: $box_shadow_card;
+
+        @include m_query(tablet_two) {
+          width: 70px;
+          height: 70px;
+          right: 0px;
+          top: 100px;
+        }
+        @include m_query(tablet) {
+          width: 70px;
+          height: 70px;
+          right: 0px;
+          top: 100px;
+        }
+        @include m_query(phone) {
+          width: 70px;
+          height: 70px;
+          right: 0px;
+          top: 100px;
+        }
       }
       .owl-prev:after {
         align-items: center;
@@ -946,6 +1182,25 @@ input {
         display: flex;
         justify-content: center;
         box-shadow: $box_shadow_card;
+
+        @include m_query(tablet_two) {
+          width: 70px;
+          height: 70px;
+          left: 0px;
+          top: 100px;
+        }
+        @include m_query(tablet) {
+          width: 70px;
+          height: 70px;
+          left: 0px;
+          top: 100px;
+        }
+        @include m_query(phone) {
+          width: 70px;
+          height: 70px;
+          left: 0px;
+          top: 100px;
+        }
       }
     }
   }

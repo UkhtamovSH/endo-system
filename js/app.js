@@ -21,11 +21,14 @@ $(window).on('scroll', function () {
 
 // **************navigation scroll function end**************
 
-// window.onscroll = function () {
-//   let t = document.getElementById('textt');
-//   if (document.documentElement.scrollTop) {
-//     t.classList.add('mystyle');
-//   } else {
-//     t.classList.remove('mystyle');
-//   }
-// };
+// **************mobile navigation start**************
+function openNav() {
+  document.getElementById('myNav').style.width = '100%';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeNav() {
+  document.getElementById('myNav').style.width = '0%';
+  document.body.style.overflow = 'visible';
+}
+// **************mobile navigation end**************
