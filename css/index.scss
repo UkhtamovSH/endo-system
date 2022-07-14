@@ -6,6 +6,10 @@
 @import './partials/variables';
 @import './partials/box-shadows';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 }
@@ -762,6 +766,80 @@ input {
 }
 // **************Activities section end **************
 
+// **************Modal start**************
+.modal-section {
+  .trigger {
+    text-align: center;
+    padding: 7px 13px;
+    background: #3e3e3e;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-family: cursive;
+  }
+
+  .modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    z-index: 999;
+  }
+  .modal-content {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    align-items: center;
+    border-radius: 0.5rem;
+    video {
+      width: 700px;
+      @include m_query(desktop) {
+        width: 600px;
+      }
+      @include m_query(tablet_two) {
+        width: 600px;
+      }
+      @include m_query(tablet) {
+        width: 400px;
+      }
+      @include m_query(phone) {
+        width: 320px;
+      }
+    }
+  }
+  .close-button {
+    float: right;
+    width: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+    transform: translate(-33px, -40px);
+  }
+  .close-button:hover {
+    background-color: darkgray;
+  }
+  .show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  }
+}
+// **************Modal end**************
+
 // **************Contacts section start**************
 .contacts {
   @include m_query(desktop) {
@@ -1019,10 +1097,40 @@ input {
 
 // **************Projects section start**************
 .projects {
+  @include m_query(desktop) {
+    padding: 0 15px 0 15px;
+  }
+  @include m_query(tablet_two) {
+    padding: 0 15px 0 15px;
+  }
+  @include m_query(tablet) {
+    padding: 0 15px 0 15px;
+  }
+  @include m_query(phone) {
+    padding: 0 15px 0 15px;
+  }
   &__flex {
     display: flex;
+    @include m_query(tablet_two) {
+      flex-direction: column;
+    }
+    @include m_query(tablet) {
+      flex-direction: column;
+    }
+    @include m_query(phone) {
+      flex-direction: column;
+    }
     &-left {
       width: 346px;
+      @include m_query(tablet_two) {
+        width: 100%;
+      }
+      @include m_query(tablet) {
+        width: 100%;
+      }
+      @include m_query(phone) {
+        width: 100%;
+      }
       .card {
         .leftright {
           display: flex;
@@ -1106,16 +1214,38 @@ input {
     &-right {
       width: calc(100% - 346px);
       padding-left: 34px;
+
+      @include m_query(tablet_two) {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 40px;
+      }
+      @include m_query(tablet) {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 40px;
+      }
+      @include m_query(phone) {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 40px;
+      }
       path {
         fill: #e3f3ff;
         stroke: #c4c4c4;
         stroke-width: 1.417px;
         transition: fill 0.5s;
         &:hover {
-          fill: #364bcc;
+          fill: url(#gradient);
           cursor: pointer;
         }
       }
+    }
+    #UZB354 {
+      position: relative;
+      width: 10px;
+      height: 10px;
+      background: red;
     }
   }
   &__main {
@@ -1133,16 +1263,53 @@ input {
     &__flex {
       display: flex;
       margin-top: 40px;
+      @include m_query(tablet_two) {
+        flex-direction: column;
+      }
+      @include m_query(tablet) {
+        flex-direction: column;
+      }
+      @include m_query(phone) {
+        flex-direction: column;
+      }
       &-left {
+        @include m_query(tablet_two) {
+          width: 100%;
+          order: 2;
+        }
+        @include m_query(tablet) {
+          width: 100%;
+          order: 2;
+        }
+        @include m_query(phone) {
+          width: 100%;
+          order: 2;
+        }
         width: calc(100% - 465px);
       }
       &-right {
         width: 465px;
+        @include m_query(tablet_two) {
+          width: 100%;
+          order: 1;
+          margin-bottom: 20px;
+        }
+        @include m_query(tablet) {
+          width: 100%;
+          order: 1;
+          margin-bottom: 20px;
+        }
+        @include m_query(phone) {
+          width: 100%;
+          order: 1;
+          margin-bottom: 20px;
+        }
         .video {
           position: relative;
           cursor: pointer;
           img {
             border-radius: $default_b_radius;
+            width: 100%;
           }
           .play_icon {
             position: absolute;
@@ -1153,8 +1320,11 @@ input {
             align-items: center;
             width: 100%;
             height: 100%;
+
             img {
               border-radius: 0;
+              width: 28.56px;
+              height: 32.43px;
             }
           }
           .circle_header {
