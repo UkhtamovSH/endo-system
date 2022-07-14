@@ -4957,4 +4957,129 @@ input:focus {
   text-align: center;
   color: #ffffff;
 }
+
+.partners-slider {
+  padding: 87px 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f3faff), to(rgba(227, 243, 255, 0)));
+  background: -webkit-linear-gradient(top, #f3faff 0%, rgba(227, 243, 255, 0) 100%);
+  background: -o-linear-gradient(top, #f3faff 0%, rgba(227, 243, 255, 0) 100%);
+  background: linear-gradient(180deg, #f3faff 0%, rgba(227, 243, 255, 0) 100%);
+}
+
+.partners-slider .tech-slideshow {
+  height: 150px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.partners-slider h1 {
+  margin-bottom: 45px;
+  color: #2c3e9a;
+}
+
+.partners-slider .tech-slideshow > div {
+  height: 300px;
+  width: 2526px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.partners-slider .tech-slideshow .mover-1 {
+  -webkit-animation: moveSlideshow 31s linear 0s infinite;
+          animation: moveSlideshow 31s linear 0s infinite;
+}
+
+.partners-slider .tech-slideshow .mover-2 {
+  -webkit-animation: moveSlideshow2 32.5s linear 0s infinite;
+          animation: moveSlideshow2 32.5s linear 0s infinite;
+}
+
+.partners-slider .tech-slideshow .mover-3 {
+  -webkit-animation: moveSlideshow3 31.5s linear 0s infinite;
+          animation: moveSlideshow3 31.5s linear 0s infinite;
+}
+
+.partners-slider .partners__card-sub {
+  width: 246px;
+  background: #ffffff;
+}
+
+@-webkit-keyframes moveSlideshow {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes moveSlideshow {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@-webkit-keyframes moveSlideshow2 {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes moveSlideshow2 {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@-webkit-keyframes moveSlideshow3 {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes moveSlideshow3 {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
 /*# sourceMappingURL=index.css.map */
