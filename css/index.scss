@@ -609,7 +609,18 @@ input {
       }
     }
     &-right {
-      height: calc(100%-346px);
+      width: calc(100% - 346px);
+      padding-left: 34px;
+      path {
+        fill: #e3f3ff;
+        stroke: #c4c4c4;
+        stroke-width: 1.417px;
+        transition: fill 0.5s;
+        &:hover {
+          fill: #364bcc;
+          cursor: pointer;
+        }
+      }
     }
   }
   &__main {
@@ -751,6 +762,25 @@ input {
 .activeLi {
   display: none;
 }
+
+// [tip] .tooltip {
+//   position: fixed;
+//   font-size: 16px;
+//   line-height: 20px;
+//   padding: 5px;
+//   background: white;
+//   border: 1px solid #ccc;
+//   visibility: hidden;
+//   opacity: 0;
+//   box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+//   transition: opacity 0.3s, visibility 0s;
+// }
+
+// [tip]:hover .tooltip {
+//   visibility: visible;
+//   opacity: 1;
+// }
+
 // **************Projects section end**************
 
 // **************Popular directions section start**************

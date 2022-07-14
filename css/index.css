@@ -1048,8 +1048,23 @@ input:focus {
 }
 
 .projects__flex-right {
-  height: -webkit-calc(100%-346px);
-  height: calc(100%-346px);
+  width: -webkit-calc(100% - 346px);
+  width: calc(100% - 346px);
+  padding-left: 34px;
+}
+
+.projects__flex-right path {
+  fill: #e3f3ff;
+  stroke: #c4c4c4;
+  stroke-width: 1.417px;
+  -webkit-transition: fill 0.5s;
+  -o-transition: fill 0.5s;
+  transition: fill 0.5s;
+}
+
+.projects__flex-right path:hover {
+  fill: #364bcc;
+  cursor: pointer;
 }
 
 .projects__main {
