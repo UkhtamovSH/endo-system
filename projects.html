@@ -50,7 +50,7 @@
    <!-- Breadcrumb section start -->
    <section class="breadcrumb container">
       <div class="breadcrumb__flex">
-         <div class="breadcrumb__flex-left">
+         <div class="breadcrumb__flex-left" data-aos="fade-right">
             <span>
                <a href="index.html">Главная</a>
             </span>
@@ -72,7 +72,8 @@
 
 
          <div class="projects__flex-right">
-            <svg version="1.2" viewbox="0 0 1000 652" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <svg data-aos="zoom-in" version="1.2" viewbox="0 0 1000 652" width="100%"
+               xmlns="http://www.w3.org/2000/svg">
                <defs>
                   <lineargradient id="gradient">
                      <stop offset="5%" stop-color="#364BCC" />
@@ -160,29 +161,30 @@
          </div>
       </div>
       <div class="projects__main">
-         <p class="text1">Клиника "Dr Boboev Health Center"</p>
-         <p class="text2">Кашкадарьинская область</p>
+         <p class="text1" data-aos="fade-up">Клиника "Dr Boboev Health Center"</p>
+         <p class="text2" data-aos="fade-up">Кашкадарьинская область</p>
          <div class="projects__main__flex">
             <div class="projects__main__flex-left">
-               <p class="text2">
+               <p class="text2" data-aos="fade-up">
                   Клиника "Dr Boboev Health Center" является ведущей частной клиникой в Республике в сферах Эндоурологии
                   и
                   Лапароскопии! Нашей компанией клиника была оснащена под ключ и были установлены следующие оборудования
                   и
                   наборы инструментов:
                </p>
-               <p class="text2">1. Эндоурологические и лапароскопические комплекты инструментов и видеосистем от RZ
+               <p class="text2" data-aos="fade-up">1. Эндоурологические и лапароскопические комплекты инструментов и
+                  видеосистем от RZ
                   MEDIZINTECHNIK GmbH</p>
-               <p class="text2">2. Рентген-хирургическая установка С-дуга</p>
-               <p class="text2">3. Гольмиевый лазер</p>
-               <p class="text2">4. Контактный литотриптор</p>
-               <p class="text2">5. Оборудования для операционного блока</p>
-               <p class="text2">6. Стационарные и портативные УЗИ аппараты от ALPINION</p>
-               <p class="text2">7. Стерилизационный комплекc от LAOKEN</p>
+               <p class="text2" data-aos="fade-up">2. Рентген-хирургическая установка С-дуга</p>
+               <p class="text2" data-aos="fade-up">3. Гольмиевый лазер</p>
+               <p class="text2" data-aos="fade-up">4. Контактный литотриптор</p>
+               <p class="text2" data-aos="fade-up">5. Оборудования для операционного блока</p>
+               <p class="text2" data-aos="fade-up">6. Стационарные и портативные УЗИ аппараты от ALPINION</p>
+               <p class="text2" data-aos="fade-up">7. Стерилизационный комплекc от LAOKEN</p>
             </div>
 
             <div class="projects__main__flex-right">
-               <div class="video trigger" id="video" onclick="playVideo()">
+               <div class="video trigger" id="video" onclick="playVideo()" data-aos="zoom-out">
                   <div class="circle pulse"></div>
                   <div class="circle_header"></div>
                   <div class="play_icon">
@@ -196,7 +198,7 @@
       </div>
       <div class="card_product_img">
          <div class="product_imgs">
-            <div class="img-display">
+            <div class="img-display" data-aos="flip-up">
                <div class="img-showcase">
                   <img src="/img/slider_project_img1.png" alt="Project img">
                   <img src="/img/slider_project_img2.png" alt="Project img">
@@ -206,27 +208,27 @@
                </div>
             </div>
             <div class="img-select">
-               <div class="img-item">
+               <div class="img-item" data-aos="flip-right">
                   <a href="#" data-id="1">
                      <img src="/img/slider_project_img1.png" alt="Project img">
                   </a>
                </div>
-               <div class="img-item">
+               <div class="img-item" data-aos="flip-right">
                   <a href="#" data-id="2">
                      <img src="/img/slider_project_img2.png" alt="Project img">
                   </a>
                </div>
-               <div class="img-item">
+               <div class="img-item" data-aos="flip-right">
                   <a href="#" data-id="3">
                      <img src="/img/slider_project_img3.png" alt="Project img">
                   </a>
                </div>
-               <div class="img-item">
+               <div class="img-item" data-aos="flip-right">
                   <a href="#" data-id="4">
                      <img src="/img/slider_project_img4.png" alt="Project img">
                   </a>
                </div>
-               <div class="img-item">
+               <div class="img-item" data-aos="flip-right">
                   <a href="#" data-id="5">
                      <img src="/img/slider_project_img5.png" alt="Project img">
                   </a>
@@ -629,7 +631,9 @@
 
    let text = "<ul>";
    for (let i = 0; i < arr.length; i++) {
-      text += `<li class='regElement' id="${arr[i].id}" onclick="func(${arr[i].id}); displayNoneElem()">`
+      text += `<li class='regElement' data-aos="flip-up"
+    data-aos-duration="3000"
+    data-aos-easing="ease-in-out" id="${arr[i].id}" onclick="func(${arr[i].id}); displayNoneElem()">`
          + `<span class="regElementSub">` +
          `<span class="left">` + arr[i].region + `</span>`
          + `<span class="right">` + arr[i].medicalCenter.length + `</span>` +
