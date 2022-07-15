@@ -2805,6 +2805,9 @@ input {
             font-weight: 400;
             transition: 400ms;
             @include text_dimensions(16px, 21px, null, $grey_20);
+            &.active {
+              color: $royal_night;
+            }
             &:hover {
               color: $royal_night;
             }

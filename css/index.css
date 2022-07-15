@@ -4785,6 +4785,10 @@ input:focus {
   color: #333333;
 }
 
+.footer__flex-left__sub-right a.active {
+  color: #2c3e9a;
+}
+
 .footer__flex-left__sub-right a:hover {
   color: #2c3e9a;
 }
