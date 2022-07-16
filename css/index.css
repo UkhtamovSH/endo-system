@@ -305,10 +305,10 @@ input:focus {
   cursor: pointer;
   font-family: 'OpenSans-Regular', sans-serif;
   font-weight: 400;
-  background: -webkit-gradient(linear, right top, left top, color-stop(5.07%, #00bf9f), color-stop(80.07%, #364bcc));
-  background: -webkit-linear-gradient(right, #00bf9f 5.07%, #364bcc 80.07%);
-  background: -o-linear-gradient(right, #00bf9f 5.07%, #364bcc 80.07%);
-  background: linear-gradient(270deg, #00bf9f 5.07%, #364bcc 80.07%);
+  background: -webkit-gradient(linear, right top, left top, from(#364bcc), color-stop(51%, #00bf9f), to(#364bcc));
+  background: -webkit-linear-gradient(right, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
+  background: -o-linear-gradient(right, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
+  background: linear-gradient(270deg, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
   -webkit-border-radius: 50px;
           border-radius: 50px;
   font-size: 18px;
@@ -316,15 +316,16 @@ input:focus {
   text-align: left;
   color: #ffffff;
   padding: 16px 32px;
-  -webkit-transition: 400ms;
-  -o-transition: 400ms;
-  transition: 400ms;
   border: none;
+  -webkit-background-size: 200% auto;
+          background-size: 200% auto;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .app-button:hover {
-  -webkit-box-shadow: 0px -8px 15px rgba(0, 0, 0, 0.05), 0px 8px 28px -6px rgba(103, 103, 103, 0.1), 0px 18px 88px -4px rgba(103, 103, 103, 0.1);
-          box-shadow: 0px -8px 15px rgba(0, 0, 0, 0.05), 0px 8px 28px -6px rgba(103, 103, 103, 0.1), 0px 18px 88px -4px rgba(103, 103, 103, 0.1);
+  background-position: right center;
 }
 
 .navigation__flex {
@@ -367,20 +368,21 @@ input:focus {
   text-decoration: none;
   -webkit-border-radius: 50px;
           border-radius: 50px;
-  -webkit-transition: 400ms;
-  -o-transition: 400ms;
-  transition: 400ms;
-  background: -webkit-gradient(linear, right top, left top, color-stop(5.07%, #00bf9f), color-stop(80.07%, #364bcc));
-  background: -webkit-linear-gradient(right, #00bf9f 5.07%, #364bcc 80.07%);
-  background: -o-linear-gradient(right, #00bf9f 5.07%, #364bcc 80.07%);
-  background: linear-gradient(270deg, #00bf9f 5.07%, #364bcc 80.07%);
+  background: -webkit-gradient(linear, right top, left top, from(#364bcc), color-stop(51%, #00bf9f), to(#364bcc));
+  background: -webkit-linear-gradient(right, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
+  background: -o-linear-gradient(right, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
+  background: linear-gradient(270deg, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
   padding: 8px 24px;
   color: #ffffff;
+  -webkit-background-size: 200% auto;
+          background-size: 200% auto;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .navigation__flex-right .nav_link_btn:hover {
-  -webkit-box-shadow: 0px -8px 15px rgba(0, 0, 0, 0.05), 0px 8px 28px -6px rgba(103, 103, 103, 0.1), 0px 18px 88px -4px rgba(103, 103, 103, 0.1);
-          box-shadow: 0px -8px 15px rgba(0, 0, 0, 0.05), 0px 8px 28px -6px rgba(103, 103, 103, 0.1), 0px 18px 88px -4px rgba(103, 103, 103, 0.1);
+  background-position: right center;
 }
 
 .navigation__flex-right .mobile_icon {
@@ -514,20 +516,21 @@ input:focus {
   text-decoration: none;
   -webkit-border-radius: 50px;
           border-radius: 50px;
-  -webkit-transition: 400ms;
-  -o-transition: 400ms;
-  transition: 400ms;
-  background: -webkit-gradient(linear, right top, left top, color-stop(5.07%, #00bf9f), color-stop(80.07%, #364bcc));
-  background: -webkit-linear-gradient(right, #00bf9f 5.07%, #364bcc 80.07%);
-  background: -o-linear-gradient(right, #00bf9f 5.07%, #364bcc 80.07%);
-  background: linear-gradient(270deg, #00bf9f 5.07%, #364bcc 80.07%);
+  background: -webkit-gradient(linear, right top, left top, from(#364bcc), color-stop(51%, #00bf9f), to(#364bcc));
+  background: -webkit-linear-gradient(right, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
+  background: -o-linear-gradient(right, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
+  background: linear-gradient(270deg, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
   padding: 8px 24px;
   color: #ffffff;
+  -webkit-background-size: 200% auto;
+          background-size: 200% auto;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .navigation-two__flex-right .nav_link_btn:hover {
-  -webkit-box-shadow: 0px -8px 15px rgba(0, 0, 0, 0.05), 0px 8px 28px -6px rgba(103, 103, 103, 0.1), 0px 18px 88px -4px rgba(103, 103, 103, 0.1);
-          box-shadow: 0px -8px 15px rgba(0, 0, 0, 0.05), 0px 8px 28px -6px rgba(103, 103, 103, 0.1), 0px 18px 88px -4px rgba(103, 103, 103, 0.1);
+  background-position: right center;
 }
 
 .navigation-two__flex-right .mobile_icon {
@@ -2786,6 +2789,10 @@ input:focus {
           justify-content: space-between;
 }
 
+.complex .product_card:hover .round_count {
+  background-position: right center;
+}
+
 .complex .product_card .round_count {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2805,13 +2812,18 @@ input:focus {
   position: absolute;
   top: 10.91px;
   left: 10.91px;
+  z-index: 2;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  background: -webkit-gradient(linear, right top, left top, color-stop(5.07%, #00bf9f), color-stop(80.07%, #364bcc));
-  background: -webkit-linear-gradient(right, #00bf9f 5.07%, #364bcc 80.07%);
-  background: -o-linear-gradient(right, #00bf9f 5.07%, #364bcc 80.07%);
-  background: linear-gradient(270deg, #00bf9f 5.07%, #364bcc 80.07%);
-  z-index: 2;
+  background: -webkit-gradient(linear, right top, left top, from(#364bcc), color-stop(51%, #00bf9f), to(#364bcc));
+  background: -webkit-linear-gradient(right, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
+  background: -o-linear-gradient(right, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
+  background: linear-gradient(270deg, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
+  -webkit-background-size: 200% auto;
+          background-size: 200% auto;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .complex .product_card .round_count .count_text {
@@ -3053,14 +3065,18 @@ input:focus {
   }
 }
 
+.catalog-flex .product_card:hover .round_count_text {
+  background-position: right center;
+}
+
 .catalog-flex .product_card .round_count_text {
   position: absolute;
   top: 10.91px;
   left: 10.91px;
-  background: -webkit-gradient(linear, right top, left top, color-stop(5.07%, #00bf9f), color-stop(80.07%, #364bcc));
-  background: -webkit-linear-gradient(right, #00bf9f 5.07%, #364bcc 80.07%);
-  background: -o-linear-gradient(right, #00bf9f 5.07%, #364bcc 80.07%);
-  background: linear-gradient(270deg, #00bf9f 5.07%, #364bcc 80.07%);
+  background: -webkit-gradient(linear, right top, left top, from(#364bcc), color-stop(51%, #00bf9f), to(#364bcc));
+  background: -webkit-linear-gradient(right, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
+  background: -o-linear-gradient(right, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
+  background: linear-gradient(270deg, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
   z-index: 2;
   padding: 4px 12px;
   font-family: 'OpenSans-Regular', sans-serif;
@@ -3071,6 +3087,11 @@ input:focus {
   font-weight: 400;
   -webkit-border-radius: 20px;
           border-radius: 20px;
+  -webkit-background-size: 200% auto;
+          background-size: 200% auto;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 
 @media (max-width: 1300px) and (min-width: 992px) {
@@ -3177,6 +3198,10 @@ input:focus {
           justify-content: space-between;
 }
 
+.product_card_flex .product_card:hover .round_count {
+  background-position: right center;
+}
+
 .product_card_flex .product_card .round_count {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3198,11 +3223,16 @@ input:focus {
   left: 10.91px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  background: -webkit-gradient(linear, right top, left top, color-stop(5.07%, #00bf9f), color-stop(80.07%, #364bcc));
-  background: -webkit-linear-gradient(right, #00bf9f 5.07%, #364bcc 80.07%);
-  background: -o-linear-gradient(right, #00bf9f 5.07%, #364bcc 80.07%);
-  background: linear-gradient(270deg, #00bf9f 5.07%, #364bcc 80.07%);
   z-index: 2;
+  background: -webkit-gradient(linear, right top, left top, from(#364bcc), color-stop(51%, #00bf9f), to(#364bcc));
+  background: -webkit-linear-gradient(right, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
+  background: -o-linear-gradient(right, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
+  background: linear-gradient(270deg, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
+  -webkit-background-size: 200% auto;
+          background-size: 200% auto;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .product_card_flex .product_card .round_count .count_text {
@@ -5084,6 +5114,86 @@ input:focus {
   }
   100% {
     left: -100%;
+  }
+}
+
+.counter-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+
+.counter-item {
+  background: var(--bg-item);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  -webkit-border-radius: 1rem;
+          border-radius: 1rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translateY(6rem);
+      -ms-transform: translateY(6rem);
+          transform: translateY(6rem);
+}
+
+.counter-img {
+  width: 7rem;
+  height: 7rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-filter: drop-shadow(0 0 0.2rem var(--bg-hero));
+          filter: drop-shadow(0 0 0.2rem var(--bg-hero));
+}
+
+.counter-img:nth-child(1) {
+  width: 9rem;
+  height: auto;
+}
+
+.counter-item:hover {
+  background: var(--bg-hero);
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.counter-item .counter {
+  font-size: 4.5rem;
+  color: red;
+  letter-spacing: 0.5rem;
+  -webkit-text-stroke-width: 0.15rem;
+  -moz-text-stroke-width: 0.15rem;
+  -ms-text-stroke-width: 0.15rem;
+  -o-text-stroke-width: 0.15rem;
+  -webkit-text-stroke-color: var(--white);
+  -moz-text-stroke-color: var(--white);
+  -ms-text-stroke-color: var(--white);
+  -o-text-stroke-color: var(--white);
+}
+
+@-webkit-keyframes slide-up {
+  0% {
+    -webkit-transform: translateY(6rem);
+            transform: translateY(6rem);
+  }
+  100% {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    -webkit-transform: translateY(6rem);
+            transform: translateY(6rem);
+  }
+  100% {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
   }
 }
 /*# sourceMappingURL=index.css.map */

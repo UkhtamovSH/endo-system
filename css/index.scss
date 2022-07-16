@@ -95,14 +95,15 @@ input {
   cursor: pointer;
   font-family: 'OpenSans-Regular', sans-serif;
   font-weight: 400;
-  background: linear-gradient(270deg, #00bf9f 5.07%, #364bcc 80.07%);
+  background: linear-gradient(270deg, #364bcc 0%, #00bf9f 51%, #364bcc 100%);
   border-radius: 50px;
   @include text_dimensions(18px, 140%, left, $white);
   padding: 16px 32px;
-  transition: 400ms;
   border: none;
+  background-size: 200% auto;
+  transition: 0.4s;
   &:hover {
-    box-shadow: $box_shadow_card_slider;
+    background-position: right center;
   }
 }
 
@@ -129,12 +130,18 @@ input {
       .nav_link_btn {
         text-decoration: none;
         border-radius: 50px;
-        transition: 400ms;
-        background: $linear_bg;
+        background: linear-gradient(
+          270deg,
+          #364bcc 0%,
+          #00bf9f 51%,
+          #364bcc 100%
+        );
         padding: 8px 24px;
         color: $white;
+        background-size: 200% auto;
+        transition: 0.4s;
         &:hover {
-          box-shadow: $box_shadow_card_slider;
+          background-position: right center;
         }
       }
       .mobile_icon {
@@ -230,12 +237,18 @@ input {
       .nav_link_btn {
         text-decoration: none;
         border-radius: 50px;
-        transition: 400ms;
-        background: $linear_bg;
+        background: linear-gradient(
+          270deg,
+          #364bcc 0%,
+          #00bf9f 51%,
+          #364bcc 100%
+        );
         padding: 8px 24px;
         color: $white;
+        background-size: 200% auto;
+        transition: 0.4s;
         &:hover {
-          box-shadow: $box_shadow_card_slider;
+          background-position: right center;
         }
       }
       .mobile_icon {
@@ -1616,6 +1629,18 @@ input {
         justify-content: center;
         box-shadow: $box_shadow_card;
 
+        // @keyframes arrow-fixed-anim {
+        //   5% {
+        //     opacity: 0;
+        //   }
+        //   20% {
+        //     opacity: 0.4;
+        //   }
+        //   100% {
+        //     opacity: 1;
+        //   }
+        // }
+
         @include m_query(tablet_two) {
           width: 70px;
           height: 70px;
@@ -1686,6 +1711,11 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    &:hover {
+      .round_count {
+        background-position: right center;
+      }
+    }
     .round_count {
       display: flex;
       justify-content: center;
@@ -1695,9 +1725,16 @@ input {
       position: absolute;
       top: 10.91px;
       left: 10.91px;
-      border-radius: 50%;
-      background: $linear_bg;
       z-index: 2;
+      border-radius: 50%;
+      background: linear-gradient(
+        270deg,
+        #364bcc 0%,
+        #00bf9f 51%,
+        #364bcc 100%
+      );
+      background-size: 200% auto;
+      transition: 0.4s;
       .count_text {
         font-family: 'OpenSans-Regular', sans-serif;
         font-style: normal;
@@ -1847,11 +1884,21 @@ input {
       min-height: 400px !important;
       padding-top: 20px;
     }
+    &:hover {
+      .round_count_text {
+        background-position: right center;
+      }
+    }
     .round_count_text {
       position: absolute;
       top: 10.91px;
       left: 10.91px;
-      background: $linear_bg;
+      background: linear-gradient(
+        270deg,
+        #364bcc 0%,
+        #00bf9f 51%,
+        #364bcc 100%
+      );
       z-index: 2;
       padding: 4px 12px;
       font-family: 'OpenSans-Regular', sans-serif;
@@ -1859,6 +1906,8 @@ input {
       @include text_dimensions(12px, 140%, null, $white);
       font-weight: 400;
       border-radius: 20px;
+      background-size: 200% auto;
+      transition: 0.4s;
     }
     .text {
       @include m_query(desktop) {
@@ -1924,6 +1973,11 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    &:hover {
+      .round_count {
+        background-position: right center;
+      }
+    }
     .round_count {
       display: flex;
       justify-content: center;
@@ -1934,8 +1988,15 @@ input {
       top: 10.91px;
       left: 10.91px;
       border-radius: 50%;
-      background: $linear_bg;
       z-index: 2;
+      background: linear-gradient(
+        270deg,
+        #364bcc 0%,
+        #00bf9f 51%,
+        #364bcc 100%
+      );
+      background-size: 200% auto;
+      transition: 0.4s;
       .count_text {
         font-family: 'OpenSans-Regular', sans-serif;
         font-style: normal;

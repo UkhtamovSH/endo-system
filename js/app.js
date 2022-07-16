@@ -54,3 +54,28 @@ AOS.init({
   anchorPlacement: 'top-bottom',
 });
 // **************AOS animation end**************
+
+// **************On Scroll Counter animation start**************
+let nums = document.querySelectorAll('.our-results__textflex-left .number');
+let section = document.querySelector('.our-results');
+let started = false;
+
+window.onscroll = function () {
+  if (window.scrollY >= section.offsetTop - 400) {
+    if (!started) {
+      nums.forEach((num) => startCount(num));
+    }
+    started = true;
+  }
+};
+
+function startCount(el) {
+  let goal = el.dataset.goal;
+  let count = setInterval(() => {
+    el.textContent++;
+    if (el.textContent == goal) {
+      clearInterval(count);
+    }
+  }, 2500 / goal);
+}
+// **************On Scroll Counter animation end**************
