@@ -4939,21 +4939,11 @@ input:focus {
 }
 
 .partners-slider {
-  padding: 87px 0;
+  padding: 87px 0 200px 0;
   background: -webkit-gradient(linear, left top, left bottom, from(#f3faff), to(rgba(227, 243, 255, 0)));
   background: -webkit-linear-gradient(top, #f3faff 0%, rgba(227, 243, 255, 0) 100%);
   background: -o-linear-gradient(top, #f3faff 0%, rgba(227, 243, 255, 0) 100%);
   background: linear-gradient(180deg, #f3faff 0%, rgba(227, 243, 255, 0) 100%);
-}
-
-.partners-slider .tech-slideshow {
-  height: 150px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
 }
 
 .partners-slider h1 {
@@ -4961,105 +4951,91 @@ input:focus {
   color: #2c3e9a;
 }
 
-.partners-slider .tech-slideshow > div {
-  height: 300px;
-  width: 2526px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+.partners-slider .slider {
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
-.partners-slider .tech-slideshow .mover-1 {
-  -webkit-animation: moveSlideshow 31s linear 0s infinite;
-          animation: moveSlideshow 31s linear 0s infinite;
+.partners-slider .slider .slide-track {
+  -webkit-animation: scroll 6s linear infinite;
+          animation: scroll 6s linear infinite;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-calc(250px * 8);
+  width: calc(250px * 8);
 }
 
-.partners-slider .tech-slideshow .mover-2 {
-  -webkit-animation: moveSlideshow2 32.5s linear 0s infinite;
-          animation: moveSlideshow2 32.5s linear 0s infinite;
+.partners-slider .slider .slide-track2 {
+  -webkit-animation: scroll2 6s linear infinite;
+          animation: scroll2 6s linear infinite;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-calc(250px * 8);
+  width: calc(250px * 8);
 }
 
-.partners-slider .tech-slideshow .mover-3 {
-  -webkit-animation: moveSlideshow3 31.5s linear 0s infinite;
-          animation: moveSlideshow3 31.5s linear 0s infinite;
-}
-
-.partners-slider .partners__card-sub {
+.partners-slider .slider .slide {
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
   width: 246px;
+  height: 130px;
+  padding: 36px;
   background: #ffffff;
+  margin: 15px;
 }
 
-@-webkit-keyframes moveSlideshow {
-  0% {
-    left: -100%;
-  }
-  50% {
-    left: 100%;
-  }
-  100% {
-    left: -100%;
-  }
+.partners-slider .slider .slide img {
+  width: 100%;
+  height: 100%;
 }
 
-@keyframes moveSlideshow {
+@-webkit-keyframes scroll {
   0% {
-    left: -100%;
-  }
-  50% {
-    left: 100%;
+    -webkit-transform: translateX(-webkit-calc(-250px * 1));
+            transform: translateX(calc(-250px * 1));
   }
   100% {
-    left: -100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
-@-webkit-keyframes moveSlideshow2 {
+@keyframes scroll {
   0% {
-    left: -100%;
-  }
-  50% {
-    left: 100%;
+    -webkit-transform: translateX(-webkit-calc(-250px * 1));
+            transform: translateX(calc(-250px * 1));
   }
   100% {
-    left: -100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
-@keyframes moveSlideshow2 {
+@-webkit-keyframes scroll2 {
   0% {
-    left: -100%;
-  }
-  50% {
-    left: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   100% {
-    left: -100%;
+    -webkit-transform: translateX(-webkit-calc(-250px * 1));
+            transform: translateX(calc(-250px * 1));
   }
 }
 
-@-webkit-keyframes moveSlideshow3 {
+@keyframes scroll2 {
   0% {
-    left: -100%;
-  }
-  50% {
-    left: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   100% {
-    left: -100%;
-  }
-}
-
-@keyframes moveSlideshow3 {
-  0% {
-    left: -100%;
-  }
-  50% {
-    left: 100%;
-  }
-  100% {
-    left: -100%;
+    -webkit-transform: translateX(-webkit-calc(-250px * 1));
+            transform: translateX(calc(-250px * 1));
   }
 }
 /*# sourceMappingURL=main.css.map */

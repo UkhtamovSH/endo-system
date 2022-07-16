@@ -2979,76 +2979,57 @@ input {
 
 // **************Partners slider section start**************
 .partners-slider {
-  padding: 87px 0;
+  padding: 87px 0 200px 0;
   background: linear-gradient(180deg, #f3faff 0%, rgba(227, 243, 255, 0) 100%);
-  .tech-slideshow {
-    height: 150px;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    transform: translate3d(0, 0, 0);
-  }
+
   h1 {
     margin-bottom: 45px;
     color: $royal_night;
   }
+  .slider {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 
-  .tech-slideshow > div {
-    height: 300px;
-    width: 2526px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate3d(0, 0, 0);
-  }
-  .tech-slideshow .mover-1 {
-    animation: moveSlideshow 31s linear 0s infinite;
-  }
-  .tech-slideshow .mover-2 {
-    animation: moveSlideshow2 32.5s linear 0s infinite;
-  }
-  .tech-slideshow .mover-3 {
-    animation: moveSlideshow3 31.5s linear 0s infinite;
-  }
-  .partners__card {
-    &-sub {
+    .slide-track {
+      animation: scroll 6s linear infinite;
+      display: flex;
+      width: calc(250px * 8);
+    }
+    .slide-track2 {
+      animation: scroll2 6s linear infinite;
+      display: flex;
+      width: calc(250px * 8);
+    }
+
+    .slide {
+      border-radius: $default_b_radius;
       width: 246px;
+      height: 130px;
+      padding: 36px;
       background: $white;
+      margin: 15px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
-
-  @keyframes moveSlideshow {
+  @keyframes scroll {
     0% {
-      left: -100%;
-    }
-    50% {
-      left: 100%;
+      transform: translateX(calc(-250px * 1));
     }
     100% {
-      left: -100%;
+      transform: translateX(0);
     }
   }
-  @keyframes moveSlideshow2 {
+  @keyframes scroll2 {
     0% {
-      left: -100%;
-    }
-    50% {
-      left: 100%;
+      transform: translateX(0);
     }
     100% {
-      left: -100%;
-    }
-  }
-  @keyframes moveSlideshow3 {
-    0% {
-      left: -100%;
-    }
-    50% {
-      left: 100%;
-    }
-    100% {
-      left: -100%;
+      transform: translateX(calc(-250px * 1));
     }
   }
 }
