@@ -340,31 +340,9 @@
 </body>
 <script src="/js/jquery.js"></script>
 <script src="/js/owl.carousel.js"></script>
-<script src="/js/aos.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="/js/app.js"></script>
 <script type="text/javascript">
-
-   // **************video play modal start**************
-   const modal = document.querySelector(".modal");
-   const trigger = document.querySelector(".trigger");
-   const closeButton = document.querySelector(".close-button");
-
-   function toggleModal() {
-      modal.classList.toggle("show-modal");
-   }
-
-   function windowOnClick(event) {
-      if (event.target === modal) {
-         toggleModal();
-      }
-   }
-
-   trigger.addEventListener("click", toggleModal);
-   closeButton.addEventListener("click", toggleModal);
-   window.addEventListener("click", windowOnClick);
-   // **************video play modal end**************
-
-
 
    // **************slider start**************
    const imgs = document.querySelectorAll('.img-select a');
@@ -380,15 +358,36 @@
    });
 
    function slideImage() {
-      const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
+      const displayWidth = document.querySelector(
+         '.img-showcase img:first-child'
+      ).clientWidth;
 
-      document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+      document.querySelector('.img-showcase').style.transform = `translateX(${-(imgId - 1) * displayWidth
+         }px)`;
    }
 
    window.addEventListener('resize', slideImage);
-
    // **************slider end**************
 
+   // **************video play modal start**************
+   var modal = document.querySelector(".modal");
+   var trigger = document.querySelector(".trigger");
+   var closeButton = document.querySelector(".close-button");
+
+   function toggleModal() {
+      modal.classList.toggle("show-modal");
+   }
+
+   function windowOnClick(event) {
+      if (event.target === modal) {
+         toggleModal();
+      }
+   }
+
+   trigger.addEventListener("click", toggleModal);
+   closeButton.addEventListener("click", toggleModal);
+   window.addEventListener("click", windowOnClick);
+   // **************video play modal end**************
 
    // **************page main functions start**************
 
