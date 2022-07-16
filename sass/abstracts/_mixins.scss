@@ -1,3 +1,13 @@
+// text dimensions mixin start
+@mixin text_dimensions($size, $l_height, $t_pos, $color) {
+  font-size: $size;
+  line-height: $l_height;
+  text-align: $t_pos;
+  color: $color;
+}
+// text dimensions mixin end
+
+// mobile mixin start
 @mixin m_query($deviceType) {
   @if $deviceType == phone {
     @media only screen and (max-width: 576px) and (min-width: 320px) {
@@ -30,3 +40,4 @@
     }
   }
 }
+// mobile mixin end

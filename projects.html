@@ -5,8 +5,9 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/index.css">
-   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/owl.carousel.css">
+   <link rel="stylesheet" href="css/aos.css" />
    <title>Projects</title>
 </head>
 
@@ -337,30 +338,16 @@
    <!-- Footer section end -->
 
 </body>
-<script src="/js/jQuery.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/owl.carousel.js"></script>
+<script src="/js/aos.js"></script>
 <script src="/js/app.js"></script>
 <script type="text/javascript">
-   // Array.from(document.querySelectorAll('title')).forEach(el => {
-   //    let tip = document.createElement('div');
-   //    tip.classList.add('tooltip');
-   //    tip.innerText = el.getAttribute('tip');
-   //    tip.style.transform =
-   //       'translate(' +
-   //       (el.hasAttribute('tip-left') ? 'calc(-100% - 5px)' : '15px') + ', ' +
-   //       (el.hasAttribute('tip-top') ? '-100%' : '0') +
-   //       ')';
-   //    el.appendChild(tip);
-   //    el.onmousemove = e => {
-   //       tip.style.left = e.clientX + 'px'
-   //       tip.style.top = e.clientY + 'px';
-   //    };
-   // });
 
    // **************video play modal start**************
-   var modal = document.querySelector(".modal");
-   var trigger = document.querySelector(".trigger");
-   var closeButton = document.querySelector(".close-button");
+   const modal = document.querySelector(".modal");
+   const trigger = document.querySelector(".trigger");
+   const closeButton = document.querySelector(".close-button");
 
    function toggleModal() {
       modal.classList.toggle("show-modal");
