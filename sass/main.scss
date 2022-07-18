@@ -1097,6 +1097,11 @@ input {
             width: 175px;
             height: 57px;
           }
+          .mas {
+            width: 175px;
+            height: 58px;
+            padding: 14px 2px;
+          }
           &-sub {
             width: 100%;
           }
@@ -1700,11 +1705,20 @@ input {
     overflow: hidden;
     width: 100%;
     min-height: 363px;
-
+    transition: 0.3s ease-in-out;
     box-shadow: 0px -8px 15px rgba(0, 0, 0, 0.05),
       0px 8px 28px -6px rgba(103, 103, 103, 0.1),
       0px 18px 88px -4px rgba(103, 103, 103, 0.1);
 
+    & > img {
+      transition: 0.3s ease-in-out;
+      z-index: 1;
+    }
+    &:hover {
+      & > img {
+        transform: scale(1.07);
+      }
+    }
     border-radius: $slider_card_b_radius;
     color: $white;
     display: flex;
@@ -1777,6 +1791,7 @@ input {
       display: flex;
       align-items: center;
       justify-content: center;
+      z-index: 2;
       @include m_query(tablet) {
         font-size: 15px;
       }
@@ -1878,6 +1893,15 @@ input {
     display: flex;
   }
   .product_card {
+    & > img {
+      transition: 0.3s ease-in-out;
+      z-index: 1;
+    }
+    &:hover {
+      & > img {
+        transform: scale(1.07);
+      }
+    }
     @include m_query(desktop) {
       width: calc(50% - 44px) !important;
       min-height: 400px !important;
@@ -1909,6 +1933,7 @@ input {
       transition: 0.4s;
     }
     .text {
+      z-index: 2;
       @include m_query(desktop) {
         font-size: 16px !important;
       }
@@ -1972,6 +1997,15 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    & > img {
+      transition: 0.3s ease-in-out;
+      z-index: 1;
+    }
+    &:hover {
+      & > img {
+        transform: scale(1.07);
+      }
+    }
     &:hover {
       .round_count {
         background-position: right center;
@@ -2039,6 +2073,7 @@ input {
       display: flex;
       align-items: center;
       justify-content: center;
+      z-index: 2;
       @include m_query(tablet) {
         font-size: 15px;
       }
@@ -2712,6 +2747,12 @@ input {
       width: 100%;
       display: flex;
     }
+    .send_btn_main {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+    }
     .send_btn {
       cursor: pointer;
       background: #ffffff;
@@ -2722,12 +2763,57 @@ input {
       @include text_dimensions(18px, null, null, $aare_river);
       font-weight: 700;
       font-family: 'OpenSans-Bold', sans-serif;
+      mask: url(https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png);
+      mask-size: 2300% 100%;
+      animation: ani2 0.5s steps(22) forwards;
+      &:hover {
+        animation: ani 0.5s steps(22) forwards;
+      }
 
       @include m_query(tablet) {
         font-size: 16px;
       }
       @include m_query(phone) {
         font-size: 16px;
+      }
+    }
+    .mas {
+      font-weight: 700;
+      font-family: 'OpenSans-Bold', sans-serif;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 50px;
+      padding: 18px 22px;
+      background: none;
+      border: 2px solid #ffffff;
+      @include text_dimensions(18px, null, null, $white);
+      @include m_query(tablet) {
+        font-size: 16px;
+      }
+      @include m_query(phone) {
+        font-size: 16px;
+      }
+    }
+
+    @keyframes ani {
+      from {
+        mask-position: 0 0;
+      }
+
+      to {
+        mask-position: 100% 0;
+      }
+    }
+    @keyframes ani2 {
+      from {
+        mask-position: 100% 0;
+      }
+
+      to {
+        mask-position: 0 0;
       }
     }
     &-sub {

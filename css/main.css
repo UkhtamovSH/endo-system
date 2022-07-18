@@ -1798,6 +1798,12 @@ input:focus {
   height: 57px;
 }
 
+.contacts__form-right .submit-app__input .mas {
+  width: 175px;
+  height: 58px;
+  padding: 14px 2px;
+}
+
 .contacts__form-right .submit-app__input-sub {
   width: 100%;
 }
@@ -2715,6 +2721,9 @@ input:focus {
   overflow: hidden;
   width: 100%;
   min-height: 363px;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   -webkit-box-shadow: 0px -8px 15px rgba(0, 0, 0, 0.05), 0px 8px 28px -6px rgba(103, 103, 103, 0.1), 0px 18px 88px -4px rgba(103, 103, 103, 0.1);
           box-shadow: 0px -8px 15px rgba(0, 0, 0, 0.05), 0px 8px 28px -6px rgba(103, 103, 103, 0.1), 0px 18px 88px -4px rgba(103, 103, 103, 0.1);
   -webkit-border-radius: 15px;
@@ -2733,6 +2742,19 @@ input:focus {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.complex .product_card > img {
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.complex .product_card:hover > img {
+  -webkit-transform: scale(1.07);
+      -ms-transform: scale(1.07);
+          transform: scale(1.07);
 }
 
 .complex .product_card:hover .round_count {
@@ -2842,6 +2864,7 @@ input:focus {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 2;
 }
 
 @media (max-width: 765px) and (min-width: 576px) {
@@ -3002,6 +3025,19 @@ input:focus {
   display: flex;
 }
 
+.catalog-flex .product_card > img {
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.catalog-flex .product_card:hover > img {
+  -webkit-transform: scale(1.07);
+      -ms-transform: scale(1.07);
+          transform: scale(1.07);
+}
+
 @media (max-width: 1300px) and (min-width: 992px) {
   .catalog-flex .product_card {
     width: -webkit-calc(50% - 44px) !important;
@@ -3038,6 +3074,10 @@ input:focus {
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
+}
+
+.catalog-flex .product_card .text {
+  z-index: 2;
 }
 
 @media (max-width: 1300px) and (min-width: 992px) {
@@ -3142,6 +3182,19 @@ input:focus {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.product_card_flex .product_card > img {
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.product_card_flex .product_card:hover > img {
+  -webkit-transform: scale(1.07);
+      -ms-transform: scale(1.07);
+          transform: scale(1.07);
 }
 
 .product_card_flex .product_card:hover .round_count {
@@ -3251,6 +3304,7 @@ input:focus {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 2;
 }
 
 @media (max-width: 765px) and (min-width: 576px) {
@@ -4478,6 +4532,13 @@ input:focus {
   display: flex;
 }
 
+.submit-app__input .send_btn_main {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
 .submit-app__input .send_btn {
   cursor: pointer;
   background: #ffffff;
@@ -4490,6 +4551,17 @@ input:focus {
   color: #00bf9f;
   font-weight: 700;
   font-family: 'OpenSans-Bold', sans-serif;
+  -webkit-mask: url(https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png);
+          mask: url(https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png);
+  -webkit-mask-size: 2300% 100%;
+          mask-size: 2300% 100%;
+  -webkit-animation: ani2 0.5s steps(22) forwards;
+          animation: ani2 0.5s steps(22) forwards;
+}
+
+.submit-app__input .send_btn:hover {
+  -webkit-animation: ani 0.5s steps(22) forwards;
+          animation: ani 0.5s steps(22) forwards;
 }
 
 @media (max-width: 765px) and (min-width: 576px) {
@@ -4501,6 +4573,79 @@ input:focus {
 @media only screen and (max-width: 576px) and (min-width: 320px) {
   .submit-app__input .send_btn {
     font-size: 16px;
+  }
+}
+
+.submit-app__input .mas {
+  font-weight: 700;
+  font-family: 'OpenSans-Bold', sans-serif;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  padding: 18px 22px;
+  background: none;
+  border: 2px solid #ffffff;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+@media (max-width: 765px) and (min-width: 576px) {
+  .submit-app__input .mas {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 576px) and (min-width: 320px) {
+  .submit-app__input .mas {
+    font-size: 16px;
+  }
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+            mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+            mask-position: 100% 0;
+  }
+}
+
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+            mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+            mask-position: 100% 0;
+  }
+}
+
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+            mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+            mask-position: 0 0;
+  }
+}
+
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+            mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+            mask-position: 0 0;
   }
 }
 
