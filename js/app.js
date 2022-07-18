@@ -1,3 +1,77 @@
+// **************slider start**************
+const imgs = document.querySelectorAll('.img-select a');
+const imgBtns = [...imgs];
+let imgId = 1;
+
+imgBtns.forEach((imgItem) => {
+  imgItem.addEventListener('click', (event) => {
+    event.preventDefault();
+    imgId = imgItem.dataset.id;
+    slideImage();
+  });
+});
+
+function slideImage() {
+  const displayWidth = document.querySelector(
+    '.img-showcase img:first-child'
+  ).clientWidth;
+
+  document.querySelector('.img-showcase').style.transform = `translateX(${
+    -(imgId - 1) * displayWidth
+  }px)`;
+}
+
+window.addEventListener('resize', slideImage);
+// **************slider end**************
+
+// **************On Scroll Counter animation start**************
+let nums = document.querySelectorAll('.our-results__textflex-left .number');
+let section = document.querySelector('.our-results');
+let started = false;
+
+window.onscroll = function () {
+  if (window.scrollY >= section.offsetTop - 400) {
+    if (!started) {
+      nums.forEach((num) => startCount(num));
+    }
+    started = true;
+  }
+};
+
+function startCount(el) {
+  let goal = el.dataset.goal;
+  let count = setInterval(() => {
+    el.textContent++;
+    if (el.textContent == goal) {
+      clearInterval(count);
+    }
+  }, 2500 / goal);
+}
+// **************On Scroll Counter animation end**************
+
+// **************Carousel start**************
+$('.complex .owl-carousel').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  autoplay: true,
+  autoplayTimeout: 500000,
+  autoplayHoverPause: true,
+  dots: false,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 2,
+    },
+    1000: {
+      items: 3,
+    },
+  },
+});
+// **************Carousel end**************
+
 // **************navigation active function start**************
 $(function () {
   var current = location.pathname;

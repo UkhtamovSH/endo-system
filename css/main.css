@@ -2057,11 +2057,17 @@ input:focus {
   cursor: pointer;
 }
 
-.projects__flex #UZB354 {
-  position: relative;
-  width: 10px;
-  height: 10px;
-  background: red;
+.projects__flex .svgnum2 {
+  fill: #2c3e9a !important;
+}
+
+.projects__flex #bukhoro {
+  z-index: 9;
+}
+
+.projects__flex #bukhoro:hover ~ #UZB354 {
+  fill: red !important;
+  cursor: pointer;
 }
 
 .projects__main {
